@@ -1,0 +1,58 @@
+title: Arredofrigo
+email: info@arredofrigo.net
+description: >-
+  Attrezzature professionali, cucine, arredamenti per ristoranti, bar e pizzerie in Toscana.
+baseurl: "" # lascia vuoto se usi dominio personalizzato
+url: "https://arredofrigo.it"
+theme: minimal-mistakes-jekyll
+locale: it-IT
+
+# SEO
+logo: /assets/img/logo.png
+repository: arredofrigo/arredofrigo.it
+#twitter_username: arredofrigo
+plugins:
+  - jekyll-include-cache
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: false
+      read_time: false
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# Navigation
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "Chi siamo"
+    url: "/chi-siamo/"
+  - title: "Realizzazioni"
+    url: "/realizzazioni/"
+  - title: "Servizi"
+    url: "/servizi/"
+  - title: "Prodotti"
+    url: "/prodotti/"
+  - title: "Contatti"
+    url: "/contatti/"
+
+# Google Analytics (opzionale)
+google_analytics: ""
+
+# Social
+author:
+  name: "Arredofrigo"
+  links:
+    - label: "WhatsApp"
+      url: "http://wa.me/+390572952803"
+    - label: "Email"
+      url: "mailto:info@arredofrigo.net"
+    - label: "Mappa"
+      url: "https://maps.google.com/?q=Arredofrigo+Pieve+a+Nievole"
