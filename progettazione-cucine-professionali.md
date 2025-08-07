@@ -38,9 +38,3 @@ A questo punto viene la fase di realizzazione della cucina, che, nei casi in cui
 ### consulenza e assistenza impiantistica sul cantiere
 
 In questa fase Arredofrigo dialoga con le aziende di impiantistica circa la disposizione dei collegamenti e delle predisposizioni necessarie per la cucina progettata, inoltre dà consulenza al cliente, ad esempio per quanto riguarda il rispetto delle normative di igiene per il rivestimento da adottare.
-
----
-
-La progettazione di cucine professionali viene offerta da Arredofrigo come servizio completo e, su preventivo, indipendente dalla vendita dei macchinari della cucina.
-
-Il servizio di progettazione è offerto a Montecatini, Pistoia e su tutto il territorio regionale. Per maggiori informazioni o per richiedere un preventivo, puoi usare questo form di contatto.
