@@ -79,3 +79,26 @@ footer {
   border-radius: 50%; 
   box-shadow: 0 0 6px rgba(0,0,0,0.2);
 }
+/* Specifico stile per pagina fornitori con griglia */
+
+.grid-marchi {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 2rem;
+  align-items: center;
+  justify-items: center;
+  padding: 2rem 0;
+}
+
+.grid-marchi img {
+  max-height: 80px;
+  max-width: 100%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.grid-marchi img:hover {
+  filter: none;
+}
+/* Fine Specifico stile per pagina fornitori con griglia */
