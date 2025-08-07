@@ -56,3 +56,11 @@ author:
       url: "mailto:info@arredofrigo.net"
     - label: "Mappa"
       url: "https://maps.google.com/?q=Arredofrigo+Pieve+a+Nievole"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE.txt
+  - .bundle
+  - vendor
