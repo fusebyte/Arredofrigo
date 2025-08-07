@@ -62,3 +62,20 @@ footer {
   max-width: 800px;
   margin: 0 auto;
 }
+
+.img-base {
+  width: 80%;
+  max-width: 300px;
+  border-radius: 12px;
+  /* object-fit: cover; */
+  display: block;
+  margin: 0 auto;
+}
+
+.img-icon{
+  width: 180px;
+  height: 180px;
+  object-fit: cover; 
+  border-radius: 50%; 
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+}
