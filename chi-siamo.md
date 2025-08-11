@@ -16,41 +16,29 @@ Il nostro obiettivo è aiutare le attività professionali a lavorare meglio, con
 
 ---
 
+{% capture contenuto %}
 ### Un tuffo nel passato
 
+Siamo nel campo della ristorazione dai suoi albori: nel 1962 nasce "Simoni Arredamenti" dall'idea di Roberto Pacini, che comincia con la vendita di bilance e affettatrici per le botteghe che stavano nascendo in quegli anni. Con il tempo il business si sviluppa e include anche la vendita di arredamenti e banchi per gastronomia e alimentari. Nel 1971 Simoni Arredamenti si sposta nella storica sede alla Colonna e amplia il catalogo dei prodotti trattati a li arredamenti per bar e quindi le cucine per la ristorazione. Nel 1990 passa il testimone a Simone, che con alle spalle le conoscenze dell'attività familiare, apre Arredofrigo: questa volta concentrandosi nell'affiancare il cliente nelle sue richieste e specializzandosi in progettazione e personalizzazione portando l'efficienza produttiva al massimo.
+{% endcapture %}
 
-<div style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 1rem;">
-
-<div style="flex: 1; min-width: 250px;">
-  <p>
-    Siamo nel campo della ristorazione dai suoi albori: nel 1963 nasce Simoni Arredamenti dal'idea di Roberto Pacini, che comincia con la vendita di bilance e affettatrici per le botteghe che stavano nascendo in quegli anni. Con il tempo il business si sviluppa e include anche la vendita di arredamenti e banchi per gastronomia e alimentari. Nel 197x Simoni Arredamenti si sposta nella storica sede alla Colonna e amplia il catalogo dei prodotti trattati a li arredamenti per bar e quindi le cucine per la ristorazione. 
-    Nel 1990 passa il testimone a Simone, che con alle spalle le conoscenze dell'attività familiare, apre Arredofrigo: questa volta concentrandosi nell'affiancare il cliente nelle sue richieste e specializzandosi in progettazione e personalizzazione portando l'efficienza produttiva al massimo.
-  </p>
-</div>
-
-<div style="flex: 0 0 auto;">
-  <img src="assets/img/ArredofrigoPrima.jpg" alt="Arredofrigo molti anni fa" class="img-base">
-</div>
-
-</div>
-
+{% include text-image-block.html 
+   text=contenuto 
+   img_src="assets/img/ArredofrigoPrima.jpg" 
+   img_alt="Arredofrigo molti anni fa"
+%}
 
 ---
 
+{% capture contenuto %}
 ## Il titolare
 
-<div style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 1rem;">
+Arredofrigo è stata fondata da Simone Pacini, con l’obiettivo di creare un punto di riferimento serio e competente nel settore delle attrezzature professionali. Fin dall’inizio ha seguito personalmente ogni progetto, con un approccio pratico, diretto e orientato alla qualità del servizio. La sua esperienza e visione continuano a guidare il lavoro dell’azienda ancora oggi.
+{% endcapture %}
 
-<div style="flex: 0 0 auto;">
-  <img src="assets/img/SimonePacini.jpeg" alt="Simone Pacini, fondatore di Arredofrigo" class="img-icon">
-</div>
-
-<div style="flex: 1; min-width: 250px;">
-  <p>
-    Arredofrigo è stata fondata da Simone Pacini, con l’obiettivo di creare un punto di riferimento serio e competente nel settore delle attrezzature professionali.  
-    Fin dall’inizio ha seguito personalmente ogni progetto, con un approccio pratico, diretto e orientato alla qualità del servizio.  
-    La sua esperienza e visione continuano a guidare il lavoro dell’azienda ancora oggi.
-  </p>
-</div>
-
-</div>
+{% include image-text-block.html 
+   text=contenuto
+   img_src="assets/img/SimonePacini.jpeg" 
+   img_alt="Simone Pacini, fondatore di Arredofrigo" 
+   img_class="img-icon"
+%}
