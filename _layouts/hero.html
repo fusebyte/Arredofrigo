@@ -1,28 +1,6 @@
-<!DOCTYPE html>
-<html lang="it">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} | Arredofrigo</title>
-    <!-- <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}"> -->
-    <link rel="stylesheet" href="{{ '/assets/css/default-style.css' | relative_url }}">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/img/cropped-favicon-sito-32x32.png' | relative_url }}">
-
-</head>
-  <body>
-    <header>
-      <a href="{{ '/' | relative_url }}">
-        <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="Logo Arredofrigo">
-      </a>
-      <nav>
-        <a href="{{ '/' | relative_url }}">Home</a>
-        <a href="{{ '/chi-siamo' | relative_url }}">Chi siamo</a>
-        <a href="{{ '/realizzazioni' | relative_url }}">Realizzazioni</a>
-        <a href="{{ '/servizi' | relative_url }}">Servizi</a>
-        <a href="{{ '/progettazione-cucine-professionali' | relative_url }}">Progettazione</a>
-        <a href="{{ '/contatti' | relative_url }}">Contatti</a>
-      </nav>
-    </header>
+---
+layout: default
+---
 
 <div class="hero-banner">
   <div class="pattern-background"></div>
@@ -32,15 +10,7 @@
   <div class="hero-title">{{page.title}}</div>
 </div>
 
-    <main>
-      {{ content }}
-    </main>
-    <footer>
-      <div class="footer-inner">
-        <p><strong>Arredofrigo</strong> - Via Arno 27/A, 51018 Pieve a Nievole (PT)</p>
-        <p>&copy; {{ site.time | date: "%Y" }} Arredofrigo. Tutti i diritti riservati.</p>
-        <!-- <p><a href="/privacy/">Privacy Policy</a></p> -->
-      </div>
-    </footer>
-  </body>
-</html>
+
+<main>
+    {{ content }}
+</main>
