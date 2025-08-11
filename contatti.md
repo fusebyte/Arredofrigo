@@ -1,12 +1,8 @@
 ---
-layout: default
+layout: hero
 title: Contatti
 ---
 
-<div class="hero-banner pattern-only">
-  <div class="pattern-background"></div>
-  <div class="hero-title">Contatti</div>
-</div>
 **Arredofrigo**  
 Via Arno 27/A  
 51018 Pieve a Nievole (PT)

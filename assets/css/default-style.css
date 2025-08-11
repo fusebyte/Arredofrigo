@@ -5,7 +5,7 @@ body {
 }
 
 p {
-  padding: 0 1rem;
+  padding: 0 0;
 }
 
 header {
@@ -38,6 +38,7 @@ nav a:hover {
 main {
   max-width: 900px;
   margin: 0 auto 2rem auto;
+  padding: 0 1rem;
 }
 
 @media (max-width: 600px) {
@@ -153,6 +154,9 @@ footer {
 .hero-banner.pattern-only .hero-blur-overlay {
   display: none;
 }
+
+
+
 
 /* Specifico stile per pagina fornitori con griglia */
 

@@ -1,16 +1,10 @@
 ---
-layout: default
+layout: hero
 title: Chi siamo
+hero_image: "assets/img/Sede.jpg"
 ---
 
 <!-- Hero section con immagine a tutto schermo e titolo sovrapposto -->
-<div class="hero-banner">
-  <div class="pattern-background"></div>
-  <img src="assets/img/Sede.jpg" alt="sede" class="hero-img">
-  <div class="hero-title">Chi siamo</div>
-</div>
-
-
 
 Arredofrigo opera dal 1990 nel settore delle attrezzature e arredamenti per cucine professionali.  
 La nostra sede è a Pieve a Nievole, in provincia di Pistoia, e lavoriamo con ristoranti, bar, pizzerie, pasticcerie e attività commerciali in tutta la Toscana.
