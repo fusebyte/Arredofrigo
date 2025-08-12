@@ -1,0 +1,9 @@
+<div class="card-grid">
+  {% for target in site.data.targets %}
+    <a class="card" href="{{ card.url | relative_url }}">
+      <img src="{{ target.image | relative_url }}" alt="{{ target.title }}">
+      <h3>{{ target.title }}</h3>
+      <p>{{ target.text }}</p>
+    </a>
+  {% endfor %}
+</div>

@@ -7,6 +7,8 @@ title: Home
 
 Attrezzature professionali e cucine su misura per ristoranti, bar e pizzerie in Toscana. Dal 1990 ci occupiamo di progettazione, vendita, installazione e assistenza.
 
+{% include card-grid.html%}
+
 ## I nostri servizi
 
 - Progettazione cucine con CAD
