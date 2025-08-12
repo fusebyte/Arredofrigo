@@ -77,10 +77,14 @@ p {
   text-decoration: none;
   color: #333;
   font-weight: 500;
+  padding: 4px;
+  border-radius: 4px;
 }
 .main-nav a:hover {
-  text-decoration: underline;
-  color: #0073aa;
+  /* text-decoration: underline;
+  color: #0073aa; */
+  background: #dad8d8;
+  scale: 1.1;
 }
 
 /* Content */
