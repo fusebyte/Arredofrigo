@@ -22,10 +22,11 @@ Il nostro obiettivo è aiutare le attività professionali a lavorare meglio, con
 Siamo nel campo della ristorazione dai suoi albori: nel 1962 nasce "Simoni Arredamenti" dall'idea di Roberto Pacini, che comincia con la vendita di bilance e affettatrici per le botteghe che stavano nascendo in quegli anni. Con il tempo il business si sviluppa e include anche la vendita di arredamenti e banchi per gastronomia e alimentari. Nel 1971 Simoni Arredamenti si sposta nella storica sede alla Colonna e amplia il catalogo dei prodotti trattati a li arredamenti per bar e quindi le cucine per la ristorazione. Nel 1990 passa il testimone a Simone, che con alle spalle le conoscenze dell'attività familiare, apre Arredofrigo: questa volta concentrandosi nell'affiancare il cliente nelle sue richieste e specializzandosi in progettazione e personalizzazione portando l'efficienza produttiva al massimo.
 {% endcapture %}
 
-{% include text-image-block.html 
+{% include image-text-block.html 
    text=contenuto 
    img_src="assets/img/ArredofrigoPrima.jpg" 
    img_alt="Arredofrigo molti anni fa"
+   img_side="right"
 %}
 
 ---
@@ -41,4 +42,5 @@ Arredofrigo è stata fondata da Simone Pacini, con l’obiettivo di creare un pu
    img_src="assets/img/SimonePacini.jpeg" 
    img_alt="Simone Pacini, fondatore di Arredofrigo" 
    img_class="img-icon"
+   img_side="left"
 %}
