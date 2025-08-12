@@ -10,20 +10,50 @@ Da oltre trent’anni, offriamo un servizio completo per la realizzazione e la g
 
 ## Progettazione di cucine professionali
 
+{% capture contenuto %}
 Ogni cucina è unica e nasce da un ascolto attento delle esigenze del cliente.  
 Il nostro servizio di progettazione parte da un confronto diretto per comprendere gli obiettivi, gli spazi e il tipo di attività.  
 Successivamente eseguiamo un sopralluogo tecnico, elaboriamo una proposta in CAD con distribuzione funzionale delle attrezzature e seguiamo i lavori fino alla messa in opera, garantendo sempre il rispetto delle normative vigenti in materia di sicurezza, igiene e flussi operativi.
+{% endcapture %}
+
+{% include image-text-block.html 
+   text=contenuto
+   img_src="/assets/img/Progettatore.jpg" 
+   img_alt="Simone Pacini, fondatore di Arredofrigo" 
+   img_class="img-icon"
+   img_side="left"
+%}
 
 ## Fornitura di attrezzature nuove e usate
 
+{% capture contenuto %}
 Disponiamo di un'ampia selezione di attrezzature professionali per ristoranti, pizzerie, bar, gastronomie e laboratori alimentari.  
 Lavoriamo con i migliori marchi del settore per offrire prodotti affidabili, tecnologicamente avanzati e duraturi.  
 Offriamo anche soluzioni usate e revisionate, ideali per chi cerca qualità a costi contenuti e con disponibilità immediata.
+{% endcapture %}
+
+{% include image-text-block.html 
+   text=contenuto
+   img_src="/assets/img/camion-consegna-arredofrigo.jpg" 
+   img_alt="consegna sul posto" 
+   img_class="img-base"
+   img_side="right"
+%}
 
 ## Installazione e collaudo
 
+{% capture contenuto %}
 L’installazione delle attrezzature non si limita al mero montaggio: il nostro servizio comprende l’allineamento completo con gli impianti esistenti, il collaudo tecnico e un anno di assistenza post-vendita inclusa.  
 Il lavoro viene eseguito da personale specializzato, con attenzione a ogni dettaglio, per garantire fin da subito un funzionamento ottimale e sicuro.
+{% endcapture %}
+
+{% include image-text-block.html 
+   text=contenuto
+   img_src="/assets/img/cucina-arredofrigo.jpg" 
+   img_alt="installazione e collaudo attrezzature sul posto" 
+   img_class="img-icon"
+   img_side="left"
+%}
 
 ## Impianti di aspirazione e canalizzazione
 
