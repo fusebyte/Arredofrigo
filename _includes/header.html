@@ -1,13 +1,25 @@
-<header>
-    <a href="{{ '/' | relative_url }}">
-      <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="Logo Arredofrigo">
-    </a>
-    <nav>
-      <a href="{{ '/' | relative_url }}">Home</a>
-      <a href="{{ '/chi-siamo' | relative_url }}">Chi siamo</a>
-      <a href="{{ '/realizzazioni' | relative_url }}">Realizzazioni</a>
-      <a href="{{ '/servizi' | relative_url }}">Servizi</a>
-      <a href="{{ '/progettazione-cucine-professionali' | relative_url }}">Progettazione</a>
-      <a href="{{ '/contatti' | relative_url }}">Contatti</a>
-    </nav>
-  </header>
+<header class="site-header">
+  <div class="header-top">
+    <div class="logo-section">
+      <a href="{{ '/' | relative_url }}">
+        <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="Logo Arredofrigo" class="logo-img">
+      </a>
+      <div class="tagline">Attrezzature per la ristorazione</div>
+    </div>
+    <div class="contact-section">
+      <div class="contact-phone">
+        <a href="tel:+390572952803"><span class="phone-icon">📞</span> +39 0572 952803</a>
+      </div>
+      <div class="contact-hours">Lun - Ven 8.30-12.30 e 16.00-19.00</div>
+    </div>
+  </div>
+  
+  <nav class="main-nav">
+    <a href="{{ '/' | relative_url }}">Home</a>
+    <a href="{{ '/chi-siamo' | relative_url }}">Chi siamo</a>
+    <a href="{{ '/realizzazioni' | relative_url }}">Realizzazioni</a>
+    <a href="{{ '/servizi' | relative_url }}">Servizi</a>
+    <a href="{{ '/progettazione-cucine-professionali' | relative_url }}">Progettazione</a>
+    <a href="{{ '/contatti' | relative_url }}">Contatti</a>
+  </nav>
+</header>

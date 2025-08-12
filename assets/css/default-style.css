@@ -8,50 +8,104 @@ p {
   padding: 0 0;
 }
 
-header {
+/* Header container */
+.site-header {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 1rem;
   background-color: #f4f4f4;
+  border-bottom: 2px solid #eee;
 }
 
-header img {
+/* Top row: logo + contacts */
+.header-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* Logo section */
+.logo-section {
+  text-align: center;
+}
+.logo-img {
   max-height: 80px;
 }
-
-nav {
-  margin-top: 1rem;
+.tagline {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 5px;
 }
 
-nav a {
-  margin: 0 0.75rem;
+/* Contact section */
+.contact-section {
+  text-align: left;
+  font-size: 0.95rem;
+}
+.contact-phone {
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #343333;
+}
+.contact-phone a{
+  text-decoration: none;
+  color: inherit;
+}
+.phone-icon {
+  margin-right: 5px;
+  color: #0073aa; /* blu */
+  font-size: 1.1rem;
+}
+.contact-hours {
+  font-weight: 600;
+  color: #343333;
+}
+
+/* Navigation */
+.main-nav {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.main-nav a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
 }
-
-nav a:hover {
+.main-nav a:hover {
   text-decoration: underline;
+  color: #0073aa;
 }
 
+/* Content */
 main {
   max-width: 900px;
   margin: 0 auto 2rem auto;
   padding: 0 1rem;
 }
 
+/* Mobile adjustments */
 @media (max-width: 600px) {
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  .header-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
-
-  nav a {
+  .contact-section {
+    margin-top: 10px;
+  }
+  .main-nav {
+    gap: 10px;
+  }
+  .main-nav a {
     margin: 0.5rem;
   }
-
 }
 
 footer {
