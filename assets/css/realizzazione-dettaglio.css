@@ -515,6 +515,27 @@
   padding: 0.2rem 0.5rem;
 }
 
+.correlata-location {
+    margin: 0 0 1rem 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.btn-correlata {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #0073aa;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    transition: background 0.3s ease;
+}
+
+.btn-correlata:hover {
+    background: #005a87;
+}
+
 .mappa-link {
     padding: 1rem;
     background: white;
