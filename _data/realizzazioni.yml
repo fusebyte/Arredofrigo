@@ -64,3 +64,18 @@
     - "forni-laboratorio-pasticceria.webp"
     - "forno-cheftop-7-teglie.webp"
     - "cucina-ad-isola-2.webp"
+
+- nome: "Yuki Sushi 🍣"
+  citta: "Grosseto"
+  slug: "yuki-sushi"
+  cartella_foto: "yuki-sushi"
+  foto_copertina: "cucina-1.webp"
+  immagini:
+    - "cucina-1.webp"
+    - "cucina-wok-6-fuochi.webp"
+    - "piatto-sashimi-misto.webp"
+    - "retro-banco-bar.webp"
+    - "cucina-2.webp"
+    - "piastra-teppanyaki.webp"
+    - "piatto-sashimi-salmone.webp"
+    - "vaporiera-dim-sum-elettrica.webp"
