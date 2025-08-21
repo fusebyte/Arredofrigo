@@ -2,6 +2,7 @@
 layout: realizzazione
 nome: "Ristorante Pacino's"
 citta: "Montecatini Terme"
+tipo: "ristorante"
 google_maps: "https://maps.app.goo.gl/QjBihgEzh47inknG9"
 cartella_foto: "pacinos"
 foto_copertina: "cucina-1.webp"

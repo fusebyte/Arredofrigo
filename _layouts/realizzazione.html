@@ -3,9 +3,53 @@ layout: default
 ---
 
 <div class="realizzazione-dettaglio">
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb">
+    <a href="/">Home</a> 
+    <span class="separator">›</span>
+    <a href="/realizzazioni.html">Realizzazioni</a>
+    <span class="separator">›</span>
+    <span class="current">{{ page.nome }}</span>
+  </nav>
+
   <div class="realizzazione-header">
-    <h1>{{ page.nome }}</h1>
-    <p class="realizzazione-location">📍 {{ page.citta }}</p>
+    <div class="header-content">
+      <div class="header-text">
+        <h1>{{ page.nome }}</h1>
+        <div class="realizzazione-meta">
+          <p class="realizzazione-location">📍 {{ page.citta }}</p>
+          {% if page.tipo == 'ristorante' %}
+            <span class="tipo-badge ristorante">🍽️ Ristorante</span>
+          {% elsif page.tipo == 'pizzeria' %}
+            <span class="tipo-badge pizzeria">🍕 Pizzeria</span>
+          {% elsif page.tipo == 'bar' %}
+            <span class="tipo-badge bar">☕ Bar</span>
+          {% elsif page.tipo == 'pasticceria' %}
+            <span class="tipo-badge pasticceria">🧁 Pasticceria</span>
+          {% elsif page.tipo == 'scuola alberghiera' %}
+            <span class="tipo-badge scuola">🎓 Scuola Alberghiera</span>
+          {% elsif page.tipo == 'trattoria' %}
+            <span class="tipo-badge trattoria">🍝 Trattoria</span>
+          {% elsif page.tipo == 'osteria' %}
+            <span class="tipo-badge osteria">🐟 Osteria</span>
+          {% else %}
+            <span class="tipo-badge default">🏪 Locale</span>
+          {% endif %}
+        </div>
+      </div>
+      {% if page.immagini and page.immagini.size > 0 %}
+        <div class="header-stats">
+          <div class="stat-item">
+            <span class="stat-number">{{ page.immagini.size }}</span>
+            <span class="stat-label">Foto</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">💼</span>
+            <span class="stat-label">Progetto</span>
+          </div>
+        </div>
+      {% endif %}
+    </div>
   </div>
 
   {% if page.descrizione %}
@@ -118,12 +162,64 @@ layout: default
   </div>
   {% endif %}
 
+  <!-- Sezione Realizzazioni Correlate -->
+  <div class="realizzazioni-correlate">
+    <h3>🎯 Altre realizzazioni</h3>
+    <div class="correlate-grid">
+      {% assign realizzazioni_correlate = site.data.realizzazioni | where_exp: "item", "item.nome != page.nome" | sample: 3 %}
+      
+      {% for realizzazione in realizzazioni_correlate %}
+        {% assign cartella_correlata = realizzazione.cartella_foto | default: realizzazione.nome | slugify | prepend: '/assets/img/realizzazioni/' %}
+        {% assign foto_correlata = realizzazione.foto_copertina | default: 'foto1.jpg' %}
+        
+        <div class="correlata-card">
+          <div class="correlata-image">
+            <img src="{{ cartella_correlata }}/{{ foto_correlata }}" alt="{{ realizzazione.nome }}" loading="lazy">
+          </div>
+          <div class="correlata-info">
+            <h4>{{ realizzazione.nome }}</h4>
+            <p class="correlata-location">📍 {{ realizzazione.citta }}</p>
+            <a href="/realizzazioni/{{ realizzazione.slug | default: realizzazione.nome | slugify }}.html" class="btn-correlata">Vedi dettagli</a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
   <div class="realizzazione-footer">
     <a href="/realizzazioni.html" class="btn-back">← Torna alle realizzazioni</a>
   </div>
 </div>
 
 <style>
+/* Breadcrumb */
+.breadcrumb {
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.breadcrumb a {
+  color: #0073aa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+  color: #005a87;
+  text-decoration: underline;
+}
+
+.breadcrumb .separator {
+  margin: 0 0.5rem;
+  color: #999;
+}
+
+.breadcrumb .current {
+  color: #333;
+  font-weight: 500;
+}
+
 .realizzazione-dettaglio {
   max-width: 1000px;
   margin: 0 auto;
@@ -131,19 +227,86 @@ layout: default
 }
 
 .realizzazione-header {
-  text-align: center;
   margin-bottom: 2rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 2rem;
+  border-radius: 12px;
+  border-left: 5px solid #0073aa;
 }
 
-.realizzazione-header h1 {
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.header-text h1 {
   color: #333;
-  margin-bottom: 0.5rem;
+  margin: 0 0 1rem 0;
+  font-size: 2.2rem;
+}
+
+.realizzazione-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .realizzazione-location {
   font-size: 1.1rem;
   color: #666;
   margin: 0;
+}
+
+.tipo-badge {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: white;
+}
+
+.tipo-badge.ristorante { background: #28a745; }
+.tipo-badge.pizzeria { background: #fd7e14; }
+.tipo-badge.bar { background: #6f42c1; }
+.tipo-badge.pasticceria { background: #e83e8c; }
+.tipo-badge.scuola { background: #20c997; }
+.tipo-badge.trattoria { background: #dc3545; }
+.tipo-badge.osteria { background: #17a2b8; }
+.tipo-badge.default { background: #6c757d; }
+
+.header-stats {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.stat-item {
+  text-align: center;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  min-width: 80px;
+}
+
+.stat-number {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0073aa;
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.8rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .realizzazione-descrizione {
@@ -470,6 +633,88 @@ layout: default
   box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3);
 }
 
+/* Stili per realizzazioni correlate */
+.realizzazioni-correlate {
+  margin: 3rem 0 2rem 0;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border-left: 4px solid #0073aa;
+}
+
+.realizzazioni-correlate h3 {
+  margin: 0 0 1.5rem 0;
+  color: #333;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.correlate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.correlata-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.correlata-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.correlata-image {
+  height: 150px;
+  overflow: hidden;
+}
+
+.correlata-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.correlata-card:hover .correlata-image img {
+  transform: scale(1.05);
+}
+
+.correlata-info {
+  padding: 1rem;
+}
+
+.correlata-info h4 {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.correlata-location {
+  margin: 0 0 1rem 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.btn-correlata {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #0073aa;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  transition: background 0.3s ease;
+}
+
+.btn-correlata:hover {
+  background: #005a87;
+}
+
 @media (max-width: 768px) {
   .galleria-grid {
     grid-template-columns: 1fr;
@@ -515,6 +760,35 @@ layout: default
   .btn-mappa {
     padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
+  }
+  
+  /* Responsive per header */
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .header-text h1 {
+    font-size: 1.8rem;
+  }
+  
+  .realizzazione-meta {
+    justify-content: center;
+  }
+  
+  .header-stats {
+    justify-content: center;
+  }
+  
+  /* Responsive per realizzazioni correlate */
+  .realizzazioni-correlate {
+    margin: 2rem 0;
+    padding: 1.5rem;
+  }
+  
+  .correlate-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 }
 </style>

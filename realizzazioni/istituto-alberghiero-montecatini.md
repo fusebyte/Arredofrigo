@@ -2,6 +2,7 @@
 layout: realizzazione
 nome: "Istituto Alberghiero Martini"
 citta: Montecatini Terme
+tipo: "scuola alberghiera"
 cartella_foto: "istituto-alberghiero-montecatini"
 foto_copertina: "forno-cheftop-7-teglie.webp"
 immagini:

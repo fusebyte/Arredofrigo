@@ -1,5 +1,6 @@
 - nome: "Pacino's"
   citta: Montecatini
+  tipo: "ristorante"
   cartella_foto: "pacinos"
   slug: "pacinos"
   foto_copertina: "cucina-1.webp"
@@ -17,6 +18,7 @@
 
 - nome: "Slitti Experience 🍫"
   citta: "Firenze"
+  tipo: "pasticceria"
   cartella_foto: "slitti-experience"
   foto_copertina: "sala.webp"
   slug: "slitti-experience"
@@ -31,6 +33,7 @@
 
 - nome: "Locanda San Martino 🥩"
   citta: Montecarlo
+  tipo: "ristorante"
   cartella_foto: "locanda-san-martino"
   slug: "locanda-san-martino"
   foto_copertina: "griglia-a-carbone-per-bistecca.webp"
@@ -47,6 +50,7 @@
 
 - nome: "Istituto Alberghiero Martini"
   citta: Montecatini
+  tipo: "scuola alberghiera"
   cartella_foto: "istituto-alberghiero-montecatini"
   slug: "istituto-alberghiero-montecatini"
   foto_copertina: "forno-cheftop-7-teglie.webp"
@@ -67,6 +71,7 @@
 
 - nome: "Yuki Sushi 🍣"
   citta: "Grosseto"
+  tipo: "ristorante"
   slug: "yuki-sushi"
   cartella_foto: "yuki-sushi"
   foto_copertina: "cucina-1.webp"
