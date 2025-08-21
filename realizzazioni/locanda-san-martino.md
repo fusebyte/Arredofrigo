@@ -2,7 +2,9 @@
 layout: realizzazione
 nome: "Locanda San Martino"
 citta: Montecarlo
-tipo: "ristorante"
+tipo: 
+  - "ristorante"
+  - "bisteccheria"
 google_maps: "https://maps.app.goo.gl/5m4aSsba8oKhCCSG7"
 cartella_foto: "locanda-san-martino"
 foto_copertina: "griglia-a-carbone-per-bistecca.webp"

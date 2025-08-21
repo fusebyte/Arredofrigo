@@ -18,6 +18,7 @@ title: Realizzazioni
       <option value="pizzeria">Pizzerie</option>
       <option value="bar">Bar</option>
       <option value="pasticceria">Pasticcerie</option>
+      <option value="bisteccheria">Bisteccherie</option>
       <option value="scuola alberghiera">Scuole Alberghiere</option>
     </select>
   </div>
@@ -218,6 +219,7 @@ title: Realizzazioni
 .tipo-badge.scuola { background: #20c997; }
 .tipo-badge.trattoria { background: #dc3545; }
 .tipo-badge.osteria { background: #17a2b8; }
+.tipo-badge.bisteccheria { background: #dc3545; }
 .tipo-badge.default { background: #6c757d; }
 
 .realizzazione-info .description {
@@ -283,7 +285,7 @@ let realizzazioniData = [
   {
     nome: "{{ realizzazione.nome }}",
     citta: "{{ realizzazione.citta }}",
-    tipo: "{{ realizzazione.tipo | default: 'ristorante' }}",
+    tipo: {% if realizzazione.tipo.size > 1 %}{{ realizzazione.tipo | jsonify }}{% else %}["{{ realizzazione.tipo | first | default: 'ristorante' }}"]{% endif %},
     descrizione: "{{ realizzazione.descrizione | escape }}",
     cartella_foto: "{{ realizzazione.cartella_foto | default: realizzazione.nome | slugify | prepend: '/assets/img/realizzazioni/' }}",
     foto_copertina: "{{ realizzazione.foto_copertina | default: 'foto1.jpg' }}",
@@ -294,20 +296,26 @@ let realizzazioniData = [
 
 let realizzazioniFiltrate = [...realizzazioniData];
 
-// Funzione per generare il badge del tipo
-function getTipoBadge(tipo) {
-  const tipi = {
+// Funzione per generare i badge dei tipi (supporta array)
+function getTipiBadges(tipi) {
+  const tipiInfo = {
     'ristorante': { emoji: '🍽️', label: 'Ristorante', class: 'ristorante' },
     'pizzeria': { emoji: '🍕', label: 'Pizzeria', class: 'pizzeria' },
     'bar': { emoji: '☕', label: 'Bar', class: 'bar' },
     'pasticceria': { emoji: '🧁', label: 'Pasticceria', class: 'pasticceria' },
+    'bisteccheria': { emoji: '🥩', label: 'Bisteccheria', class: 'bisteccheria' },
     'scuola alberghiera': { emoji: '🎓', label: 'Scuola Alberghiera', class: 'scuola' },
     'trattoria': { emoji: '🍝', label: 'Trattoria', class: 'trattoria' },
     'osteria': { emoji: '🐟', label: 'Osteria', class: 'osteria' }
   };
   
-  const tipoInfo = tipi[tipo] || { emoji: '🏪', label: 'Locale', class: 'default' };
-  return `<span class="tipo-badge ${tipoInfo.class}">${tipoInfo.emoji} ${tipoInfo.label}</span>`;
+  // Se tipi è una stringa, la convertiamo in array
+  const tipiArray = Array.isArray(tipi) ? tipi : [tipi];
+  
+  return tipiArray.map(tipo => {
+    const tipoInfo = tipiInfo[tipo] || { emoji: '🏪', label: 'Locale', class: 'default' };
+    return `<span class="tipo-badge ${tipoInfo.class}">${tipoInfo.emoji} ${tipoInfo.label}</span>`;
+  }).join(' ');
 }
 
 // Funzione per renderizzare le realizzazioni
@@ -326,7 +334,7 @@ function renderRealizzazioni(realizzazioni) {
   }
   
   gallery.innerHTML = realizzazioni.map(realizzazione => `
-    <div class="realizzazione-card" data-tipo="${realizzazione.tipo}">
+    <div class="realizzazione-card" data-tipo="${Array.isArray(realizzazione.tipo) ? realizzazione.tipo.join(',') : realizzazione.tipo}">
       <div class="realizzazione-image">
         <img src="${realizzazione.cartella_foto}/${realizzazione.foto_copertina}" 
              alt="${realizzazione.nome}" loading="lazy">
@@ -335,7 +343,7 @@ function renderRealizzazioni(realizzazioni) {
             <h3>${realizzazione.nome}</h3>
             <div class="meta-info">
               <p class="location">📍 ${realizzazione.citta}</p>
-              ${getTipoBadge(realizzazione.tipo)}
+              ${getTipiBadges(realizzazione.tipo)}
             </div>
             ${realizzazione.descrizione ? `<p class="description">${realizzazione.descrizione.substring(0, 100)}...</p>` : ''}
           </div>
@@ -373,7 +381,9 @@ function filterRealizzazioni() {
                          realizzazione.citta.toLowerCase().includes(searchTerm) ||
                          (realizzazione.descrizione && realizzazione.descrizione.toLowerCase().includes(searchTerm));
     
-    const matchesTipo = tipoFilter === 'tutti' || realizzazione.tipo === tipoFilter;
+    // Gestisce sia array che stringhe per il tipo
+    const tipiArray = Array.isArray(realizzazione.tipo) ? realizzazione.tipo : [realizzazione.tipo];
+    const matchesTipo = tipoFilter === 'tutti' || tipiArray.includes(tipoFilter);
     
     return matchesSearch && matchesTipo;
   });
@@ -392,7 +402,10 @@ function sortRealizzazioni() {
       case 'citta':
         return a.citta.localeCompare(b.citta);
       case 'tipo':
-        return a.tipo.localeCompare(b.tipo);
+        // Per ordinamento tipo, usa il primo tipo nell'array
+        const tipoA = Array.isArray(a.tipo) ? a.tipo[0] : a.tipo;
+        const tipoB = Array.isArray(b.tipo) ? b.tipo[0] : b.tipo;
+        return tipoA.localeCompare(tipoB);
       default:
         return 0;
     }

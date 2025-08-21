@@ -2,7 +2,9 @@
 layout: realizzazione
 nome: "Slitti Experience"
 citta: "Firenze"
-tipo: "pasticceria"
+tipo: 
+- "pasticceria"
+- "bar"
 google_maps: "https://maps.app.goo.gl/4DDHA4MzWtLWCBsF9"
 cartella_foto: "slitti-experience"
 foto_copertina: "sala.webp"

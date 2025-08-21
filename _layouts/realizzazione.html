@@ -18,23 +18,29 @@ layout: default
         <h1>{{ page.nome }}</h1>
         <div class="realizzazione-meta">
           <p class="realizzazione-location">📍 {{ page.citta }}</p>
-          {% if page.tipo == 'ristorante' %}
-            <span class="tipo-badge ristorante">🍽️ Ristorante</span>
-          {% elsif page.tipo == 'pizzeria' %}
-            <span class="tipo-badge pizzeria">🍕 Pizzeria</span>
-          {% elsif page.tipo == 'bar' %}
-            <span class="tipo-badge bar">☕ Bar</span>
-          {% elsif page.tipo == 'pasticceria' %}
-            <span class="tipo-badge pasticceria">🧁 Pasticceria</span>
-          {% elsif page.tipo == 'scuola alberghiera' %}
-            <span class="tipo-badge scuola">🎓 Scuola Alberghiera</span>
-          {% elsif page.tipo == 'trattoria' %}
-            <span class="tipo-badge trattoria">🍝 Trattoria</span>
-          {% elsif page.tipo == 'osteria' %}
-            <span class="tipo-badge osteria">🐟 Osteria</span>
-          {% else %}
-            <span class="tipo-badge default">🏪 Locale</span>
-          {% endif %}
+          <div class="tipi-badges">
+            {% for tipo in page.tipo %}
+              {% if tipo == 'ristorante' %}
+                <span class="tipo-badge ristorante">🍽️ Ristorante</span>
+              {% elsif tipo == 'pizzeria' %}
+                <span class="tipo-badge pizzeria">🍕 Pizzeria</span>
+              {% elsif tipo == 'bar' %}
+                <span class="tipo-badge bar">☕ Bar</span>
+              {% elsif tipo == 'pasticceria' %}
+                <span class="tipo-badge pasticceria">🧁 Pasticceria</span>
+              {% elsif tipo == 'bisteccheria' %}
+                <span class="tipo-badge bisteccheria">🥩 Bisteccheria</span>
+              {% elsif tipo == 'scuola alberghiera' %}
+                <span class="tipo-badge scuola">🎓 Scuola Alberghiera</span>
+              {% elsif tipo == 'trattoria' %}
+                <span class="tipo-badge trattoria">🍝 Trattoria</span>
+              {% elsif tipo == 'osteria' %}
+                <span class="tipo-badge osteria">🐟 Osteria</span>
+              {% else %}
+                <span class="tipo-badge default">🏪 Locale</span>
+              {% endif %}
+            {% endfor %}
+          </div>
         </div>
       </div>
       {% if page.immagini and page.immagini.size > 0 %}
@@ -274,10 +280,19 @@ layout: default
 .tipo-badge.pizzeria { background: #fd7e14; }
 .tipo-badge.bar { background: #6f42c1; }
 .tipo-badge.pasticceria { background: #e83e8c; }
+.tipo-badge.bisteccheria { background: #dc3545; }
 .tipo-badge.scuola { background: #20c997; }
 .tipo-badge.trattoria { background: #dc3545; }
 .tipo-badge.osteria { background: #17a2b8; }
 .tipo-badge.default { background: #6c757d; }
+
+/* Container per badge multipli */
+.tipi-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
 
 .header-stats {
   display: flex;
