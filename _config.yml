@@ -64,3 +64,4 @@ exclude:
   - LICENSE.txt
   - .bundle
   - vendor
+  - script-utili
