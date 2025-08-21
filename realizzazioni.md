@@ -23,7 +23,7 @@ Ecco alcune cucine professionali realizzate e installate per i nostri clienti:
               <p class="description">{{ realizzazione.descrizione | truncate: 100 }}</p>
             {% endif %}
           </div>
-          <a href="/realizzazioni/{{ realizzazione.slug default: realizzazione.nome | slugify }}.html" class="btn-dettagli">Vedi dettagli</a>
+          <a href="/realizzazioni/{{ realizzazione.slug | default: realizzazione.nome | slugify }}.html" class="btn-dettagli">Vedi dettagli</a>
         </div>
       </div>
     </div>
