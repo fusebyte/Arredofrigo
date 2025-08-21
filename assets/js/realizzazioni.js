@@ -13,7 +13,8 @@ function getTipiBadges(tipi) {
     'scuola alberghiera': { emoji: '🎓', label: 'Scuola Alberghiera', class: 'scuola' },
     'trattoria': { emoji: '🍝', label: 'Trattoria', class: 'trattoria' },
     'osteria': { emoji: '🐟', label: 'Osteria', class: 'osteria' },
-    'agriturismo' : { emoji: '🌾', label: 'Agriturismo', class: 'agriturismo' }
+    'agriturismo' : { emoji: '🌾', label: 'Agriturismo', class: 'agriturismo' },
+    'supermercato' : { emoji: '🛒', label: 'Supermercato', class: 'supermercato' }
   };
   
   // Se tipi è una stringa, la convertiamo in array
@@ -74,8 +75,8 @@ function updateStats(count) {
   }
   
   statsElement.innerHTML = `
-    <p>Mostrando <strong>${count}</strong> di <strong>${realizzazioniData.length}</strong> realizzazioni</p>
-  `;
+    <p>Mostrando <strong>${count}</strong> realizzazioni</p>
+  `; //  di <strong>${realizzazioniData.length}</strong> 
 }
 
 // Funzione di filtro e ricerca

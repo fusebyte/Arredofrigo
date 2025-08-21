@@ -1,6 +1,7 @@
 ---
 layout: realizzazione
 nome: "Istituto Alberghiero Martini"
+title: "Istituto Alberghiero Martini"
 citta: Montecatini Terme
 tipo: "scuola alberghiera"
 cartella_foto: "istituto-alberghiero-montecatini"

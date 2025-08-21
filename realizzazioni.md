@@ -25,6 +25,7 @@ permalink: /realizzazioni
       <option value="bisteccheria">Bisteccherie</option>
       <option value="scuola alberghiera">Scuole Alberghiere</option>
       <option value="agriturismo">Agriturismo</option>
+      <option value="supermercato">Supermercato</option>
     </select>
   </div>
   <div class="sort-container">

@@ -1,6 +1,7 @@
 ---
 layout: realizzazione
 nome: "Azienda Agricola Dai Papini"
+title: "Azienda Agricola Dai Papini"
 citta: Monsummano
 tipo:
     - ristorante

@@ -1,6 +1,7 @@
 ---
 layout: realizzazione
 nome: "Surgelati Madero"
+title: "Surgelati Madero"
 citta: "Pistoia"
 google_maps: "https://maps.app.goo.gl/ZeFJHqptNeE9tmXg6"
 tipo:

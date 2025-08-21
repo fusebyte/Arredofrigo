@@ -1,6 +1,7 @@
 ---
 layout: realizzazione
 nome: "Slitti Experience"
+title: "Slitti Experience"
 citta: "Firenze"
 tipo: 
 - "pasticceria"

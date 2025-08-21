@@ -1,6 +1,7 @@
 ---
 layout: realizzazione
 nome: "Locanda San Martino"
+title: "Locanda San Martino"
 citta: Montecarlo
 tipo: 
   - "ristorante"
