@@ -99,6 +99,7 @@
     - agriturismo
     - bisteccheria
   slug: "azienda-agricola-dai-papini"
+  disegno_cad: "disegno.webp"
   cartella_foto: "azienda-agricola-dai-papini"
   foto_copertina: "logo.webp"
   immagini:
@@ -136,6 +137,7 @@
     - ristorante
   slug: "luna-rossa-pizza-e-griglia"
   cartella_foto: "luna-rossa-pizza-e-griglia"
+  disegno_cad: "progetto.webp"
   foto_copertina: "banco-pizza.webp"
   immagini:
   - "banco-pizza-dettaglio.webp"

@@ -51,7 +51,10 @@ function renderRealizzazioni(realizzazioni) {
             <h3>${realizzazione.nome}</h3>
             <div class="meta-info">
               <p class="location">📍 ${realizzazione.citta}</p>
-              ${getTipiBadges(realizzazione.tipo)}
+              <div class="badges-container">
+                ${getTipiBadges(realizzazione.tipo)}
+                ${realizzazione.disegno_cad ? '<span class="cad-badge">📐 CAD</span>' : ''}
+              </div>
             </div>
             ${realizzazione.descrizione ? `<p class="description">${realizzazione.descrizione.substring(0, 100)}...</p>` : ''}
           </div>
@@ -83,6 +86,7 @@ function updateStats(count) {
 function filterRealizzazioni() {
   const searchTerm = document.getElementById('search-input').value.toLowerCase();
   const tipoFilter = document.getElementById('tipo-filter').value;
+  const cadFilter = document.getElementById('cad-filter').checked;
   
   realizzazioniFiltrate = realizzazioniData.filter(realizzazione => {
     const matchesSearch = realizzazione.nome.toLowerCase().includes(searchTerm) || 
@@ -93,7 +97,10 @@ function filterRealizzazioni() {
     const tipiArray = Array.isArray(realizzazione.tipo) ? realizzazione.tipo : [realizzazione.tipo];
     const matchesTipo = tipoFilter === 'tutti' || tipiArray.includes(tipoFilter);
     
-    return matchesSearch && matchesTipo;
+    // Filtro CAD: se attivo, mostra solo realizzazioni con disegno_cad
+    const matchesCad = !cadFilter || (realizzazione.disegno_cad && realizzazione.disegno_cad.trim() !== '');
+    
+    return matchesSearch && matchesTipo && matchesCad;
   });
   
   renderRealizzazioni(realizzazioniFiltrate);

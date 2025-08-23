@@ -24,9 +24,15 @@ permalink: /realizzazioni
       <option value="pasticceria">Pasticcerie</option>
       <option value="bisteccheria">Bisteccherie</option>
       <option value="scuola alberghiera">Scuole Alberghiere</option>
-      <option value="agriturismo">Agriturismo</option>
-      <option value="supermercato">Supermercato</option>
+      <option value="agriturismo">Agriturismi</option>
+      <option value="supermercato">Supermercati</option>
     </select>
+  </div>
+  <div class="cad-filter-container">
+    <label class="cad-filter-label">
+      <input type="checkbox" id="cad-filter" onchange="filterRealizzazioni()">
+      <span class="cad-filter-text">📐 Solo con CAD</span>
+    </label>
   </div>
   <div class="sort-container">
     <label for="sort-select">Ordina per:</label>
@@ -54,7 +60,8 @@ let realizzazioniData = [
     descrizione: "{{ realizzazione.descrizione | escape }}",
     cartella_foto: "{{ realizzazione.cartella_foto | default: realizzazione.nome | slugify | prepend: '/assets/img/realizzazioni/' }}",
     foto_copertina: "{{ realizzazione.foto_copertina | default: 'foto1.jpg' }}",
-    slug: "{{ realizzazione.slug | default: realizzazione.nome | slugify }}"
+    slug: "{{ realizzazione.slug | default: realizzazione.nome | slugify }}",
+    disegno_cad: "{{ realizzazione.disegno_cad }}"
   }{% unless forloop.last %},{% endunless %}
   {% endfor %}
 ];

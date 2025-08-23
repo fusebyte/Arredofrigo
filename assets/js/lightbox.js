@@ -9,6 +9,8 @@ let startX = 0;
 let startY = 0;
 let translateX = 0;
 let translateY = 0;
+let isCadMode = false; // Flag per distinguere modalità CAD da galleria
+let cadImages = [];
 
 // Inizializza le immagini quando la pagina si carica
 document.addEventListener('DOMContentLoaded', function() {
@@ -22,9 +24,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const descrizioneEl = item.querySelector('.foto-nome');
     return descrizioneEl ? descrizioneEl.textContent.trim() : '';
   });
+
+  // Inizializza le immagini CAD
+  cadImages = Array.from(document.querySelectorAll('.cad-image-wrapper img')).map(img => ({
+    src: img.src,
+    alt: img.alt
+  }));
 });
 
 function openLightbox(index) {
+  isCadMode = false; // Modalità galleria normale
   currentImageIndex = index;
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightbox-image');
@@ -50,6 +59,12 @@ function openLightbox(index) {
       lightboxTitle.textContent = 'Immagine';
     }
     
+    // Mostra i controlli di navigazione solo se ci sono più immagini
+    const navButtons = document.querySelectorAll('.lightbox-nav');
+    navButtons.forEach(btn => {
+      btn.style.display = images.length > 1 ? 'block' : 'none';
+    });
+    
     lightbox.style.display = 'block';
     document.body.style.overflow = 'hidden';
     
@@ -63,21 +78,63 @@ function closeLightbox() {
   lightbox.style.display = 'none';
   document.body.style.overflow = 'auto';
   
+  isCadMode = false;
   // Reset zoom e posizione
   currentScale = 1;
   translateX = 0;
   translateY = 0;
+  
+  const lightboxImg = document.getElementById('lightbox-image');
+  if (lightboxImg) {
+    lightboxImg.style.transform = `scale(${currentScale}) translate(${translateX}px, ${translateY}px)`;
+  }
+}
+
+// Funzione specifica per il lightbox CAD
+function openLightboxCAD(imageSrc, title) {
+  isCadMode = true; // Modalità CAD
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-image');
+  const lightboxDescription = document.getElementById('lightbox-description');
+  const counter = document.getElementById('lightbox-counter');
+
+  if (counter) {
+    counter.textContent = `1 / 1`;
+  }
+
+  // Reset zoom e posizione
+  currentScale = 1;
+  translateX = 0;
+  translateY = 0;
+  
+  lightboxImg.src = imageSrc;
+  lightboxImg.alt = title;
+  lightboxImg.style.transform = `scale(${currentScale}) translate(${translateX}px, ${translateY}px)`;
+  
+  if (lightboxDescription) {
+    lightboxDescription.textContent = title;
+    lightboxDescription.style.display = 'block';
+  }
+  
+  lightbox.style.display = 'block';
+  document.body.style.overflow = 'hidden';
+  
+  // Aggiungi event listeners per zoom e drag
+  setupImageInteractions(lightboxImg);
 }
 
 function navigateImage(direction) {
-  if (images.length <= 1) return;
+
+  let curImagesList = isCadMode ? cadImages : images;
+
+  if (curImagesList.length <= 1) return;
   
   currentImageIndex += direction;
-  
-  if (currentImageIndex >= images.length) {
+
+  if (currentImageIndex >= curImagesList.length) {
     currentImageIndex = 0;
   } else if (currentImageIndex < 0) {
-    currentImageIndex = images.length - 1;
+    currentImageIndex = curImagesList.length - 1;
   }
   
   const lightboxImg = document.getElementById('lightbox-image');
@@ -88,12 +145,12 @@ function navigateImage(direction) {
   currentScale = 1;
   translateX = 0;
   translateY = 0;
-  
-  lightboxImg.src = images[currentImageIndex].src;
-  lightboxImg.alt = images[currentImageIndex].alt;
+
+  lightboxImg.src = curImagesList[currentImageIndex].src;
+  lightboxImg.alt = curImagesList[currentImageIndex].alt;
   lightboxImg.style.transform = `scale(${currentScale}) translate(${translateX}px, ${translateY}px)`;
-  counter.textContent = `${currentImageIndex + 1} / ${images.length}`;
-  
+  counter.textContent = `${currentImageIndex + 1} / ${curImagesList.length}`;
+
   // Aggiorna la descrizione
   if (descriptions[currentImageIndex]) {
     lightboxTitle.textContent = descriptions[currentImageIndex];

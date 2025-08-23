@@ -7,7 +7,7 @@
   border-radius: 12px;
   margin: 1.5rem 0;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr auto 1fr;
   gap: 1rem;
   align-items: end;
 }
@@ -51,6 +51,42 @@
 .filter-container select:focus, .sort-container select:focus {
   outline: none;
   border-color: #0073aa;
+}
+
+/* Filtro CAD */
+.cad-filter-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cad-filter-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  font-weight: 500;
+  color: #333;
+  white-space: nowrap;
+}
+
+.cad-filter-label:hover {
+  background-color: rgba(111, 66, 193, 0.1);
+}
+
+.cad-filter-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #6f42c1;
+  cursor: pointer;
+}
+
+.cad-filter-text {
+  font-size: 0.9rem;
+  user-select: none;
 }
 
 /* Risultati e statistiche */
@@ -158,8 +194,15 @@
   opacity: 0.9;
 }
 
-/* Badge per il tipo di locale */
-.tipo-badge {
+/* Badge per il tipo di locale e CAD */
+.badges-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.tipo-badge, .cad-badge {
   display: inline-block;
   padding: 0.25rem 0.5rem;
   background: #0073aa;
@@ -169,6 +212,14 @@
   font-weight: 500;
   text-transform: capitalize;
   white-space: nowrap;
+}
+
+.cad-badge {
+  background: #6f42c1;
+  background: linear-gradient(135deg, #6f42c1 0%, #8b5cf6 100%);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .tipo-badge.ristorante { background: #28a745; }
@@ -232,7 +283,12 @@
     gap: 0.5rem;
   }
   
-  .tipo-badge {
+  .badges-container {
+    flex-direction: row;
+    gap: 0.25rem;
+  }
+  
+  .tipo-badge, .cad-badge {
     font-size: 0.7rem;
     padding: 0.2rem 0.4rem;
   }

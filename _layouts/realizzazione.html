@@ -66,6 +66,8 @@ layout: default
   </div>
 
   <div class="realizzazione-content">
+    {% assign cartella = page.cartella_foto | default: page.nome | slugify | prepend: '/assets/img/realizzazioni/' %}
+    
     <!-- Descrizione -->
     {% if page.descrizione %}
       <section class="description-section">
@@ -73,11 +75,10 @@ layout: default
       </section>
     {% endif %}
 
+
     <!-- Galleria foto -->
     {% if page.immagini and page.immagini.size > 0 %}
       <section class="gallery-section">
-
-        {% assign cartella = page.cartella_foto | default: page.nome | slugify | prepend: '/assets/img/realizzazioni/' %}
         <div class="foto-grid">
           {% for immagine in page.immagini %}
             {% assign nome_pulito = immagine | split: '.' | first | replace: '-', ' ' | replace: '_', ' ' %}
@@ -96,6 +97,30 @@ layout: default
           {% endfor %}
         </div>
       </section>
+    {% endif %}
+
+    <!-- Disegno CAD -->
+    {% if page.disegno_cad %}
+    <section class="cad-section">
+      <h2>📐 Progettazione</h2>
+      <div class="cad-container">
+        <div class="cad-image-wrapper" onclick="openLightboxCAD('{{ cartella }}/{{ page.disegno_cad }}', 'Progettazione - {{ page.nome }}')">
+          <img src="{{ cartella }}/{{ page.disegno_cad }}" alt="Disegno CAD - {{ page.nome }}" class="cad-image"
+            loading="lazy"
+            >
+          <div class="cad-overlay">
+            <div class="cad-info">
+              <span class="cad-icon">🔍</span>
+              <p class="cad-label">Clicca per ingrandire</p>
+            </div>
+          </div>
+        </div>
+        <div class="cad-description">
+          <h3>Progetto tecnico</h3>
+          <p>Disegno CAD della cucina professionale realizzata per <strong>{{ page.nome }}</strong> a {{ page.citta }}.</p>
+        </div>
+      </div>
+    </section>
     {% endif %}
 
     <!-- Google Maps -->
@@ -154,6 +179,8 @@ layout: default
         </div>
       </div>
     </div>
+
+    
 
     <!-- Sezione Realizzazioni Correlate -->
     <div class="realizzazioni-correlate">
