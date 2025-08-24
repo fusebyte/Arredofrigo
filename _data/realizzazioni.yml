@@ -146,3 +146,21 @@
   - "linea-cottura.webp"
   - "logo.webp"
   - "piano-di-lavoro-ad-isola.webp"
+
+- nome: "Villa Zelma"
+  citta: "Serravalle"
+  tipo:
+    - agriturismo
+    - ristorante
+  slug: "villa-zelma"
+  cartella_foto: "villa-zelma"
+  disegno_cad: "disegno.webp"
+  foto_copertina: "esterno.webp"
+  immagini:
+  - "esterno.webp"
+  - "linea-cottura.webp"
+  - "forno-con-cappa-dedicata.webp"
+  - "pass.webp"
+  - "sala.webp"
+  - "linea-cottura-e-colonna-forno-abbattitore.webp"
+  - "piano-preparazione.webp"
