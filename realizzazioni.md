@@ -59,7 +59,8 @@ let realizzazioniData = [
     tipo: {% if realizzazione.tipo.size > 1 %}{{ realizzazione.tipo | jsonify }}{% else %}["{{ realizzazione.tipo | first | default: 'ristorante' }}"]{% endif %},
     descrizione: "{{ realizzazione.descrizione | escape }}",
     cartella_foto: "{{ realizzazione.cartella_foto | default: realizzazione.nome | slugify | prepend: '/assets/img/realizzazioni/' }}",
-    foto_copertina: "{{ realizzazione.foto_copertina | default: 'foto1.jpg' }}",
+    foto_copertina: "{{ realizzazione.foto_copertina | default: 'foto1.webp
+    ' }}",
     slug: "{{ realizzazione.slug | default: realizzazione.nome | slugify }}",
     disegno_cad: "{{ realizzazione.disegno_cad }}"
   }{% unless forloop.last %},{% endunless %}

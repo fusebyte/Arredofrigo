@@ -192,7 +192,7 @@ layout: default
             {% for realizzazione in realizzazioni_correlate %}
             {% assign cartella_correlata = realizzazione.cartella_foto | default: realizzazione.nome | slugify | prepend:
             '/assets/img/realizzazioni/' %}
-            {% assign foto_correlata = realizzazione.foto_copertina | default: 'foto1.jpg' %}
+            {% assign foto_correlata = realizzazione.foto_copertina | default: 'foto1.webp' %}
     
             <div class="correlata-card">
                 <div class="correlata-image">

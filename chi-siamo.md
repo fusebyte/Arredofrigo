@@ -1,7 +1,7 @@
 ---
 layout: hero
 title: Chi siamo
-hero_image: "assets/img/Sede.jpg"
+hero_image: "assets/img/Sede.webp"
 ---
 
 <!-- Hero section con immagine a tutto schermo e titolo sovrapposto -->
@@ -24,7 +24,7 @@ Siamo nel campo della ristorazione dai suoi albori: nel 1962 nasce "Simoni Arred
 
 {% include image-text-block.html 
    text=contenuto 
-   img_src="assets/img/ArredofrigoPrima.jpg" 
+   img_src="assets/img/ArredofrigoPrima.webp" 
    img_alt="Arredofrigo molti anni fa"
    img_side="right"
 %}
@@ -39,7 +39,7 @@ Arredofrigo è stata fondata da Simone Pacini, con l’obiettivo di creare un pu
 
 {% include image-text-block.html 
    text=contenuto
-   img_src="assets/img/SimonePacini.jpeg" 
+   img_src="assets/img/SimonePacini.webp" 
    img_alt="Simone Pacini, fondatore di Arredofrigo" 
    img_class="img-icon"
    img_side="left"

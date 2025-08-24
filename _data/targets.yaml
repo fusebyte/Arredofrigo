@@ -1,19 +1,19 @@
-- image: assets/img/logo.png
+- image: assets/img/logo.webp
   title: Ristorazione
   text: Attrezzature per cucine professionali e arredi su misura.
   url: /ristorazione
 
-- image: assets/img/logo.png
+- image: assets/img/logo.webp
   title: GDO
   text: Soluzioni per supermercati e punti vendita.
   url: /gdo
 
-- image: assets/img/logo.png
+- image: assets/img/logo.webp
   title: Bandi pubblici
   text: Supporto tecnico e documentazione per appalti e gare.
   url: /bandi
 
-- image: /assets/img/logo.png
+- image: /assets/img/logo.webp
   title: Assistenza
   text: Servizio di manutenzione e pronto intervento.
   url: /assistenza

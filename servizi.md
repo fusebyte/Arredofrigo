@@ -18,7 +18,7 @@ Successivamente eseguiamo un sopralluogo tecnico, elaboriamo una proposta in CAD
 
 {% include image-text-block.html 
    text=contenuto
-   img_src="/assets/img/Progettatore.jpg" 
+   img_src="/assets/img/Progettatore.webp" 
    img_alt="Simone Pacini, fondatore di Arredofrigo" 
    img_class="img-icon"
    img_side="left"
@@ -34,7 +34,7 @@ Offriamo anche soluzioni usate e revisionate, ideali per chi cerca qualità a co
 
 {% include image-text-block.html 
    text=contenuto
-   img_src="/assets/img/camion-consegna-arredofrigo.jpg" 
+   img_src="/assets/img/camion-consegna-arredofrigo.webp" 
    img_alt="consegna sul posto" 
    img_class="img-base"
    img_side="right"
@@ -49,7 +49,7 @@ Il lavoro viene eseguito da personale specializzato, con attenzione a ogni detta
 
 {% include image-text-block.html 
    text=contenuto
-   img_src="/assets/img/cucina-arredofrigo.jpg" 
+   img_src="/assets/img/cucina-arredofrigo.webp" 
    img_alt="installazione e collaudo attrezzature sul posto" 
    img_class="img-icon"
    img_side="left"

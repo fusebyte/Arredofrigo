@@ -8,7 +8,7 @@ theme: jekyll-theme-minimal
 locale: it-IT
 
 # SEO
-logo: /assets/img/logo.png
+logo: /assets/img/logo.webp
 repository: arredofrigo/arredofrigo.it
 #twitter_username: arredofrigo
 plugins:
