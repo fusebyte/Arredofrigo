@@ -207,6 +207,27 @@
   - zona-lavaggio.webp
   - primo-piano-colonna-forni-cucina-e-lavaggio.webp
 
+- nome: "Passatempo"
+  citta: "Gambassi Terme"
+  tipo:
+    - ristorante
+    - pizzeria
+    - bar
+    - bisteccheria
+  slug: "passatempo"
+  cartella_foto: "passatempo"
+  foto_copertina: "esterno.webp"
+  immagini:
+    - "banco-bar.webp"
+    - "esterno.webp"
+    - "lavaggio.webp"
+    - "retrobanco-bar.webp"
+    - "zona-cottura-2.webp"
+    - "cottura.webp"
+    - "griglia-e-cottura.webp"
+    - "preparazione.webp"
+    - "sala.webp"
+    - "zona-pizzeria.webp"
 
 - nome: "ristorante"
   citta: "Prato"
