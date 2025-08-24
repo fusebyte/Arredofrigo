@@ -1,6 +1,7 @@
 ---
 layout: realizzazione
 nome: "Fortezza 59"
+title: "Fortezza 59"
 citta: "Pistoia"
 tipo:
     - ristorante

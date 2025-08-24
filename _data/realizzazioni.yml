@@ -183,3 +183,27 @@
   - "linea-cottura.webp"
   - "consegna-merce.webp"
   - "forno-da-pizza-moretti-2.webp"
+
+- nome: "ngh bar"
+  citta: "Castelfranco"
+  tipo:
+    - ristorante
+    - bar
+  slug: "ngh-bar"
+  cartella_foto: "ngh-bar"
+  foto_copertina: "sala.webp"
+  immagini:
+  - colonna-forni-cheftop-con-cappa.webp
+  - prospettiva-da-cucina-a-lavaggio.webp
+  - cucina-1.webp
+  - sala.webp
+  - cucina-a-induzione.webp
+  - vetrina-bar.webp
+  - frigoriferi-a-colonna-e-tavolo-frigo.webp
+  - zona-cottura-e-lavaggio.webp
+  - isola-centrale.webp
+  - zona-cottura.webp
+  - piano-preparazione.webp
+  - zona-lavaggio.webp
+  - primo-piano-colonna-forni-cucina-e-lavaggio.webp
+

@@ -1,6 +1,7 @@
 ---
 layout: realizzazione
 nome: "Villa Zelma"
+title: "Villa Zelma"
 citta: "Serravalle"
 google_maps: "https://maps.app.goo.gl/x2J8g2R8Rvn1NMQs7"
 tipo:
