@@ -26,6 +26,7 @@ permalink: /realizzazioni
       <option value="scuola alberghiera">Scuole Alberghiere</option>
       <option value="agriturismo">Agriturismi</option>
       <option value="supermercato">Supermercati</option>
+      <option value="mensa">Mense Aziendali</option>
     </select>
   </div>
   <div class="cad-filter-container">

@@ -233,6 +233,7 @@
 .tipo-badge.default { background: #6c757d; }
 .tipo-badge.agriturismo { background: #ffc107; color: #212529; }
 .tipo-badge.supermercato { background: #007bff; }
+.tipo-badge.mensa { background: #fd7e14; }
 
 .realizzazione-info .description {
   margin: 0 0 1rem 0;
