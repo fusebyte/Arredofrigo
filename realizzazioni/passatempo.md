@@ -9,6 +9,7 @@ tipo:
     - bar
     - bisteccheria
 slug: "passatempo"
+google_maps: "https://maps.app.goo.gl/PxfoRZfXjjbAWgGR8"
 cartella_foto: "passatempo"
 foto_copertina: "esterno.webp"
 immagini:
