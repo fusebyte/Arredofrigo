@@ -164,3 +164,22 @@
   - "sala.webp"
   - "linea-cottura-e-colonna-forno-abbattitore.webp"
   - "piano-preparazione.webp"
+
+- nome: "Fortezza 59"
+  citta: "Pistoia"
+  tipo:
+    - ristorante
+    - pizzeria
+    - bar
+  slug: "fortezza-59"
+  cartella_foto: "fortezza-59"
+  disegno_cad: "disegno.webp"
+  foto_copertina: "esterno.webp"
+  immagini:
+  - "esterno.webp"
+  - "lavori-in-corso.webp"
+  - "forno-da-pizza-moretti.webp"
+  - "linea-cottura-aspirazione-e-forno.webp"
+  - "linea-cottura.webp"
+  - "consegna-merce.webp"
+  - "forno-da-pizza-moretti-2.webp"
