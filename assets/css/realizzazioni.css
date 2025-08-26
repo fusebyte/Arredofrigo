@@ -234,6 +234,7 @@
 .tipo-badge.agriturismo { background: #ffc107; color: #212529; }
 .tipo-badge.supermercato { background: #007bff; }
 .tipo-badge.mensa { background: #fd7e14; }
+.tipo-badge.pesce { background: #17a2b8; }
 
 .realizzazione-info .description {
   margin: 0 0 1rem 0;

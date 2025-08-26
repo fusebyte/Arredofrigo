@@ -27,6 +27,7 @@ permalink: /realizzazioni
       <option value="agriturismo">Agriturismi</option>
       <option value="supermercato">Supermercati</option>
       <option value="mensa">Mense Aziendali</option>
+      <option value="pesce">Pesce</option>
     </select>
   </div>
   <div class="cad-filter-container">
