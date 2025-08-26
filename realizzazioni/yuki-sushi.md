@@ -15,6 +15,7 @@ immagini:
     - "piatto-sashimi-misto.webp"
     - "retro-banco-bar.webp"
     - "cucina-2.webp"
+    - "wok.webp"
     - "piastra-teppanyaki.webp"
     - "piatto-sashimi-salmone.webp"
     - "vaporiera-dim-sum-elettrica.webp"
