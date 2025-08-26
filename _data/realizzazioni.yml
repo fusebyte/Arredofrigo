@@ -251,6 +251,22 @@
     - logo-il-maialetto.webp                  
     - vetrina-espositiva-carne-tecfrigo.webp
 
+- nome: "Trattoria da Sandrino"
+  citta: "Sorana"
+  tipo:
+    - ristorante
+  slug: "trattoria-da-sandrino"
+  cartella_foto: "trattoria-da-sandrino"
+  foto_copertina: "sala.webp"
+  immagini:
+    - trattoria-da-sandrino-insegna.webp
+    - pass-cucina-e-zona-lavaggio-con-capotte.webp
+    - zona-cottura-centrale-e-tavoli-preparazione.webp
+    - impianto-aspirazione.webp
+    - da-sandrino-logo.webp
+    - pappardelle-al-ragu.webp
+    - sala.webp
+    - trattoria-da-sandrino-esterno.webp
 
 - nome: "Maroil"
   citta: "Altopascio"
@@ -271,24 +287,6 @@
     - stabilimento.webp
     - zona-cottura.webp
 
-- nome: "Trattoria da Sandrino"
-  citta: "Sorana"
-  tipo:
-    - ristorante
-  slug: "trattoria-da-sandrino"
-  cartella_foto: "trattoria-da-sandrino"
-  foto_copertina: "sala.webp"
-  immagini:
-    - trattoria-da-sandrino-insegna.webp
-    - pass-cucina-e-zona-lavaggio-con-capotte.webp
-    - zona-cottura-centrale-e-tavoli-preparazione.webp
-    - impianto-aspirazione.webp
-    - da-sandrino-logo.webp
-    - pappardelle-al-ragu.webp
-    - sala.webp
-    - trattoria-da-sandrino-esterno.webp
-
-    
 
 - nome: "ristorante"
   citta: "Prato"
@@ -303,3 +301,17 @@
     - "zona-lavaggio-capotte-con-cappa.webp"
     - "cucina-centrale.webp"
     - "preparazione.webp"
+
+- nome: "Il Buongustaio"
+  citta: "Quarrata"
+  tipo:
+    - pizzeria
+  slug: "buongustaio"
+  cartella_foto: "buongustaio"
+  foto_copertina: "bancone.webp"
+  immagini:
+    - banco-esposizione.webp
+    - bancone.webp
+    - impastatrice-igf.webp
+    - retrobanco.webp
+    - sala.webp
