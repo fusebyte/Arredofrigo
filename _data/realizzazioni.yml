@@ -152,6 +152,22 @@
     - "prodotti 2.webp"
     - "prodotti 5.webp"
 
+- nome: "Viale Verdi 54"
+  citta: "Montecatini Terme"
+  tipo:
+    - pasticceria
+    - bar
+    - ristorante
+  slug: "viale-verdi-54"
+  cartella_foto: "viale-verdi-54"
+  foto_copertina: "interno.webp"
+  immagini:
+    - "colonna-forno-abbattitore.webp"
+    - "interno.webp"
+    - "linea-cottura.webp"
+    - "logo.webp"
+    - "pasticcini.webp"
+
 - nome: "Luna Rossa Pizza & Griglia"
   citta: "Pistoia"
   tipo:
