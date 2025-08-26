@@ -7,6 +7,7 @@ tipo:
     - ristorante
 slug: "ristorante-da-carla"
 cartella_foto: "ristorante-da-carla"
+google_maps: "https://maps.app.goo.gl/dVbtcZeVTre9bf4r5"
 foto_copertina: "friggitrici-fuochi-cuocipasta.webp"
 immagini:
     - friggitrici-fuochi-cuocipasta.webp
