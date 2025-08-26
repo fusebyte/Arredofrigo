@@ -1,6 +1,6 @@
 ---
 layout: realizzazione
-nome: "ristorante"
+nome: "Ristorante Prato"
 title: "Ristorante Prato"
 citta: "Prato"
 tipo:
