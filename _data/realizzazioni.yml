@@ -317,10 +317,11 @@
     - pesce
   slug: "pescheria-lucca"
   cartella_foto: "pescheria-lucca"
-  foto_copertina: "banco-caldo.webp"
+  foto_copertina: "banco-pesce.webp"
   immagini:
     - banco-caldo.webp
     - cappa.webp
+    - banco-pesce.webp
     - prospettiva-cucina.webp
     - banco-pescheria.webp
     - linea-cottura.webp
