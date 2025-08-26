@@ -4,6 +4,7 @@
   max-width: 1000px;
   margin: 0 auto;
   padding: 2rem 1rem;
+  min-width: 620px;
 }
 
 /* Breadcrumb */
@@ -304,6 +305,7 @@
   width: 100%;
   height: 250px;
   object-fit: cover;
+  display: block;
   transition: transform 0.3s ease;
 }
 
@@ -693,6 +695,7 @@
 @media (max-width: 768px) {
   .realizzazione-dettaglio {
     padding: 1rem;
+    min-width: unset!important;
   }
   
   .header-content {

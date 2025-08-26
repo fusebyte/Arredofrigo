@@ -1,3 +1,30 @@
+
+:root {
+    --max-width: 900px;
+    
+    /* Colori Brand Arredofrigo */
+    --brand-red: #f20000;
+    --brand-blue: #0073aa;
+    
+    /* Colori Header e Footer */
+    --header-bg-start: #1e3a5f;
+    --header-bg-end: #2a4d6e;
+    --header-border: #4a6fa5;
+    --header-text: white;
+    --header-text-light: #e6f3ff;
+    
+    /* Colori Sezioni */
+    --section-gray-start: #f8f9fa;
+    --section-gray-end: #ffffff;
+    --section-gray-border-start: #e9ecef;
+    --section-gray-border-end: #f8f9fa;
+    
+    --section-blue-start: #e8f4f8;
+    --section-blue-end: #f1f8fb;
+    --section-blue-border-start: #0073aa;
+    --section-blue-border-end: #00a0e4;
+}
+
 body {
   font-family: system-ui, sans-serif;
   margin: 0;
@@ -14,8 +41,9 @@ p {
   flex-direction: column;
   align-items: center;
   padding: 1rem;
-  background-color: #f4f4f4;
-  border-bottom: 2px solid #eee;
+  background: linear-gradient(135deg, var(--header-bg-start) 0%, var(--header-bg-end) 100%);
+  border-bottom: 3px solid var(--header-border);
+  color: var(--header-text);
 }
 
 /* Top row: logo + contacts */
@@ -37,7 +65,7 @@ p {
 }
 .tagline {
   font-size: 0.9rem;
-  color: #555;
+  color: var(--header-text-light);
   margin-top: 5px;
 }
 
@@ -49,20 +77,20 @@ p {
 .contact-phone {
   font-weight: 600;
   margin-bottom: 4px;
-  color: #343333;
+  color: var(--header-text);
 }
 .contact-phone a{
   text-decoration: none;
-  color: inherit;
+  color: var(--header-text);
 }
 .phone-icon {
   margin-right: 5px;
-  color: #0073aa; /* blu */
+  color: var(--brand-red);
   font-size: 1.1rem;
 }
 .contact-hours {
   font-weight: 600;
-  color: #343333;
+  color: var(--header-text-light);
 }
 
 /* Navigation */
@@ -75,22 +103,22 @@ p {
 }
 .main-nav a {
   text-decoration: none;
-  color: #333;
+  color: var(--header-text);
   font-weight: 500;
-  padding: 4px;
-  border-radius: 4px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
 }
 .main-nav a:hover {
-  /* text-decoration: underline;
-  color: #0073aa; */
-  background: #dad8d8;
-  scale: 1.1;
+  background: rgb(23 39 59);
+  transform: translateY(-2px);
+  color: var(--brand-red);
 }
 
 /* Content */
 main {
-  max-width: 900px;
-  margin: 0 auto 2rem auto;
+  max-width: var(--max-width);
+  margin: 0 auto 0 auto;
   padding: 0 1rem;
 }
 
@@ -113,12 +141,13 @@ main {
 }
 
 footer {
-  background-color: #f4f4f4;
-  padding: 1rem;
+  background: linear-gradient(135deg, var(--header-bg-start) 0%, var(--header-bg-end) 100%);
+  padding: 1.5rem;
   text-align: center;
   font-size: 0.9rem;
-  color: #555;
-  margin-top: 3rem;
+  color: var(--header-text-light);
+  border-top: 3px solid var(--header-border);
+  /* margin-top: 3rem; */
 }
 
 .footer-inner {
@@ -197,7 +226,7 @@ footer {
   flex-wrap: wrap;
   justify-content: center; /* centra righe parziali */
   gap: 2rem;
-  max-width: 1100px;
+  /* max-width: 1100px; */
   margin: 3rem auto;
   padding: 0 1rem;
 }
@@ -243,7 +272,7 @@ footer {
 .btn-primary {
   display: inline-block;
   padding: 12px 24px;
-  background: #0073aa;
+  background: var(--brand-blue);
   color: white !important;
   text-decoration: none;
   border-radius: 6px;
@@ -257,7 +286,7 @@ footer {
 }
 
 .btn-primary:hover {
-  background: #005a87;
+  background: var(--header-bg-start);
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 115, 170, 0.3);
 }
@@ -269,13 +298,13 @@ footer {
 
 /* Stile specifico per le card dei servizi */
 .card.servizio {
-  background: #f8f9fa;
-  border-left: 4px solid #0073aa;
+  background: var(--section-gray-start);
+  border-left: 4px solid var(--brand-blue);
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .card.servizio h3 {
-  color: #0073aa;
+  color: var(--brand-blue);
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -284,4 +313,90 @@ footer {
 .card.servizio p {
   color: #555;
   line-height: 1.5;
+}
+
+/* Home page sections con banner colorati */
+
+/* Classe base per tutte le sezioni con banner */
+.banner-section {
+  padding: 3rem 0;
+  position: relative;
+}
+
+.banner-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+}
+
+/* Sezione Hero - Bianco pulito */
+.hero-section {
+  background: #ffffff;
+}
+
+.hero-section h1 {
+  text-align: center;
+  color: var(--brand-blue);
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.hero-section p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Sezione Grigia */
+.section-gray {
+  background: linear-gradient(135deg, var(--section-gray-start) 0%, var(--section-gray-end) 100%);
+}
+
+.section-gray::before {
+  background: linear-gradient(90deg, var(--section-gray-border-start) 0%, var(--section-gray-border-end) 100%);
+  height: 2px;
+}
+
+/* Sezione Blu */
+.section-blue {
+  background: linear-gradient(135deg, var(--section-blue-start) 0%, var(--section-blue-end) 100%);
+}
+
+.section-blue::before {
+  background: linear-gradient(90deg, var(--section-blue-border-start) 0%, var(--section-blue-border-end) 100%);
+  height: 4px;
+}
+
+.section-blue h2 {
+  text-align: center;
+  color: var(--brand-blue);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+
+/* Responsive per le sezioni */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 2rem 0;
+  }
+  
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  
+  .section-gray,
+  .section-blue {
+    padding: 2rem 0;
+  }
+  
+  .section-blue h2 {
+    font-size: 1.5rem;
+  }
 }
