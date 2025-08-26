@@ -5,6 +5,7 @@ title: "Ristorante di Pesce 🐟"
 citta: "Pieve a Nievole"
 tipo:
     - ristorante
+    - pesce
 slug: "ristorante-pesce-pieve-a-nievole"
 cartella_foto: "ristorante-pesce-pieve-a-nievole"
 foto_copertina: "forno-sfondo-linea-cottura.webp"

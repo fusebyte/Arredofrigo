@@ -6,6 +6,7 @@ citta: "Pistoia"
 google_maps: "https://maps.app.goo.gl/ZeFJHqptNeE9tmXg6"
 tipo:
     - supermercato
+    - pesce
 cartella_foto: "surgelati-madero-pistoia"
 foto_copertina: "prospettiva interno.webp"
 immagini:

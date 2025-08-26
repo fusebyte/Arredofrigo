@@ -79,6 +79,7 @@
   citta: "Grosseto"
   tipo: 
     - "ristorante"
+    - pesce
   slug: "yuki-sushi"
   cartella_foto: "yuki-sushi"
   foto_copertina: "cucina-1.webp"
@@ -96,6 +97,7 @@
   citta: "Altopascio"
   tipo: 
     - "ristorante"
+    - pesce
   slug: "il-melograno"
   cartella_foto: "il-melograno"
   foto_copertina: "crudo-di-mare.webp"
@@ -134,6 +136,7 @@
   citta: "Pistoia"
   tipo:
     - supermercato
+    - pesce
   slug: "surgelati-madero-pistoia"
   cartella_foto: "surgelati-madero-pistoia"
   foto_copertina: "prospettiva interno.webp"
@@ -306,6 +309,25 @@
     - stabilimento.webp
     - zona-cottura.webp
 
+- nome: "Pescheria Lucca"
+  citta: "Lucca"
+  tipo:
+    - supermercato
+    - ristorante
+    - pesce
+  slug: "pescheria-lucca"
+  cartella_foto: "pescheria-lucca"
+  foto_copertina: "banco-caldo.webp"
+  immagini:
+    - banco-caldo.webp
+    - cappa.webp
+    - prospettiva-cucina.webp
+    - banco-pescheria.webp
+    - linea-cottura.webp
+    - pulisci-cozze-e-linea-preparazione.webp
+    - campana-sottovuoto-e-friggitrice.webp
+    - piano-di-lavoro-centrale.webp
+    - spellasogliole.webp
 
 - nome: "Pizza Al Tegamino"
   citta: "Prato"
@@ -372,6 +394,7 @@
   citta: "Pieve a Nievole"
   tipo:
     - ristorante
+    - pesce
   slug: "ristorante-pesce-pieve-a-nievole"
   cartella_foto: "ristorante-pesce-pieve-a-nievole"
   foto_copertina: "forno-sfondo-linea-cottura.webp"

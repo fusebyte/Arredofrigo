@@ -3,7 +3,9 @@ layout: realizzazione
 nome: "Yuki Sushi"
 title: "Yuki Sushi"
 citta: "Grosseto"
-tipo: "ristorante"
+tipo: 
+    - "ristorante"
+    - pesce
 google_maps: "https://maps.app.goo.gl/WyFi8rCgBcu2boob8"
 cartella_foto: "yuki-sushi"
 foto_copertina: "cucina-1.webp"

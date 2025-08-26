@@ -4,6 +4,7 @@ nome: "Ristorante Il Melograno"
 citta: "Altopascio"
 tipo: 
     - "ristorante"
+    - pesce
 slug: "il-melograno"
 cartella_foto: "il-melograno"
 google_maps: "https://maps.app.goo.gl/ngKmTSCuxfjApQik8"
