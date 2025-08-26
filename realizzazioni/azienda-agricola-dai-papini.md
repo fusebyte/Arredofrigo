@@ -9,7 +9,7 @@ tipo:
     - agriturismo
     - bisteccheria
 cartella_foto: "azienda-agricola-dai-papini"
-foto_copertina: "logo.webp"
+foto_copertina: "tavoli-all-aperto.webp"
 disegno_cad: "disegno.webp"
 immagini:
     - "logo.webp"
