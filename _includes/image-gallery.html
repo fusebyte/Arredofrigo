@@ -1,0 +1,54 @@
+{% if include.immagini and include.immagini.size > 0 %}
+  {% assign cartella = include.cartella %}
+    <section class="gallery-section">
+    <div class="foto-grid">
+        {% for immagine in include.immagini %}
+        {% assign nome_pulito = immagine | split: '.' | first | replace: '-', ' ' | replace: '_', ' ' %}
+        <div class="foto-item" onclick="openLightbox({{ forloop.index0 }})">
+            <img src="{{ cartella }}/{{ immagine }}" 
+                alt="{{ page.nome }} - {{ immagine }}" 
+                class="foto-preview galleria-item"
+                loading="lazy">
+            <div class="foto-overlay">
+            <div class="foto-info">
+                <p class="foto-nome">{{ nome_pulito | capitalize }}</p>
+                <span class="zoom-icon">🔍</span>
+            </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+      <div class="lightbox-content" onclick="event.stopPropagation()">
+        <img id="lightbox-image" src="" alt="">
+        <div id="lightbox-description" class="lightbox-description"></div>
+        
+        <!-- Controlli di navigazione -->
+        <button class="lightbox-nav lightbox-prev" onclick="navigateImage(-1)">&#10094;</button>
+        <button class="lightbox-nav lightbox-next" onclick="navigateImage(1)">&#10095;</button>
+        
+        <!-- Controlli zoom e pan -->
+        <!-- <div class="lightbox-controls">
+          <button type="button" onclick="zoomIn()">🔍+</button>
+          <button type="button" onclick="zoomOut()">🔍-</button>
+          <button type="button" onclick="resetZoom()">⌂</button>
+        </div> -->
+        <div id="lightbox-counter" class="lightbox-counter"></div>
+        
+        <!-- Aiuto -->
+        <div class="lightbox-help">
+          <div>🖱️ Rotella: Zoom</div>
+          <div>🖱️ Trascina: Sposta</div>
+          <div>↕️ Frecce: Naviga</div>
+          <div>2× Click: Reset</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/assets/js/lightbox.js"></script>
+    <link rel="stylesheet" href="/assets/css/realizzazione-dettaglio.css">
+{% endif %}
