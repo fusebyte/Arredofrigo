@@ -108,7 +108,8 @@ layout: default
     <section class="cad-section">
       <h2>📐 Progettazione</h2>
       <div class="cad-container">
-        <div class="cad-image-wrapper" onclick="openLightboxCAD('{{ cartella }}/{{ page.disegno_cad }}', 'Progettazione - {{ page.nome }}')">
+        {% assign nome_escaped = page.nome | replace: "'", "\\'" %}
+        <div class="cad-image-wrapper" onclick="openLightboxCAD('{{ cartella }}/{{ page.disegno_cad }}', 'Progettazione - {{ nome_escaped }}')">
           <img src="{{ cartella }}/{{ page.disegno_cad }}" alt="Disegno CAD - {{ page.nome }}" class="cad-image"
             loading="lazy"
             >
