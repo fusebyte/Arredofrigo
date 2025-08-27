@@ -6,6 +6,7 @@ citta: "Montecatini Terme"
 tipo: "ristorante"
 google_maps: "https://maps.app.goo.gl/QjBihgEzh47inknG9"
 cartella_foto: "pacinos"
+disegno_cad: "disegno.webp"
 foto_copertina: "cucina-1.webp"
 immagini:
 - "cucina-1.webp"
