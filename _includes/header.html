@@ -29,10 +29,19 @@
   
   <nav class="main-nav">
     <a href="{{ '/' | relative_url }}">Home</a>
-    <a href="{{ '/chi-siamo' | relative_url }}">Chi siamo</a>
     <a href="{{ '/realizzazioni' | relative_url }}">Realizzazioni</a>
-    <a href="{{ '/servizi' | relative_url }}">Servizi</a>
-    <a href="{{ '/progettazione-cucine-professionali' | relative_url }}">Progettazione</a>
+    <div class="nav-dropdown dropdown-toggle" style="display: flex;align-items: center;">    
+      <a href="{{ '/servizi' | relative_url }}">Servizi</a>
+      <span class="dropdown-arrow" style="cursor:pointer;display:flex;align-items:center;margin-left:4px;">
+        <!-- Freccia SVG più moderna -->
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </span>
+      <div class="dropdown-menu">
+        <a href="{{ '/progettazione-cucine-professionali' | relative_url }}">Progettazione</a>
+      </div>
+    </div>
+    <a href="{{ '/chi-siamo' | relative_url }}">Chi siamo</a>
     <a href="{{ '/contatti' | relative_url }}">Contatti</a>
   </nav>
 </header>
+<script src="{{ '/assets/js/menu.js' | relative_url }}"></script>

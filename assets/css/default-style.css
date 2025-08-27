@@ -115,6 +115,58 @@ p {
   color: var(--brand-red);
 }
 
+/* Dropdown menu styles */
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-toggle {
+  cursor: pointer;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: linear-gradient(135deg, var(--header-bg-start) 0%, var(--header-bg-end) 100%);
+  min-width: 180px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  border-radius: 0 0 8px 8px;
+  z-index: 100;
+  transition: opacity 0.2s;
+  opacity: 0;
+}
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu {
+  display: block;
+  opacity: 1;
+}
+/* Apertura via JS */
+.dropdown-menu.open {
+  display: block;
+  opacity: 1;
+}
+
+.dropdown-arrow {
+  transition: transform 0.2s;
+}
+.dropdown-arrow.open svg {
+  transform: rotate(180deg);
+}
+.dropdown-menu a {
+  display: block;
+  padding: 10px 16px;
+  color: var(--header-text);
+  text-decoration: none;
+  border-radius: 0;
+  font-weight: 400;
+  transition: background 0.2s, color 0.2s;
+}
+.dropdown-menu a:hover {
+  background: rgb(23 39 59);
+  color: var(--brand-red);
+}
+
 /* Content */
 main {
   max-width: var(--max-width);
