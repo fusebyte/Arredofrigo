@@ -28,6 +28,12 @@ Vuoi scoprire dal vivo le potenzialità dei forni Unox Mind.Maps™ nella tua cu
 Scegli tu la data e l’orario più comodi: noi ti portiamo tecnologia, supporto tecnico e consigli d’uso direttamente in cucina.
 
 ---
+{% assign prodotti_unox = site.data.prodotti | where: "marchio", "Unox"  %}
+  
+{% include products-cards.html 
+   prodotti=prodotti_unox
+%}
+---
 
 ### Informazioni Tecniche (facilitano la dimostrazione)
 

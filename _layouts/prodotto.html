@@ -27,7 +27,7 @@ layout: default
           {% if page.ambito %}
           <div class="tipi-badges ambiti">
             {% for ambito in page.ambito %}
-              <span class="tipo-badge badge {{ambito}}">{{ ambito }}</span>
+              <span class="tipo-badge badge {{ambito}} badge-ambito">{{ ambito }}</span>
             {% endfor %}
           </div>
           {% endif %}
@@ -101,7 +101,7 @@ layout: default
           <div class="correlata-info">
             <h4>{{ prodotto.nome_completo }}</h4>
             <p class="correlata-location">{{ prodotto.marchio }}</p>
-            <a href="/prodotti/{{ prodotto.nome_slug | default: prodotto.nome_completo | slugify }}.html" class="btn-correlata">Vedi dettagli</a>
+            <a href="/prodotti/{{ prodotto.nome_slug | default: prodotto.nome_completo | slugify }}" class="btn-correlata">Vedi dettagli</a>
           </div>
         </div>
       {% endfor %}

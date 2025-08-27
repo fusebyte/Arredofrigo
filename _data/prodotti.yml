@@ -53,10 +53,11 @@
     - ristorazione
     - gastronomia
     - pasticceria
-  cartella_immagini: unox
+  cartella_immagini: prodotti/unox
   immagini:
-    - "cheftop-mindmaps-plus-front.webp"
-    - "cheftop-mindmaps-plus-panel.webp"
+    - "colonna-5-teglie-3-teglie.webp"
+    - "colonna-cheftop-3-teglie.webp"
+    - "cheftop-5-teglie-stand-alto.webp"
 
 - nome: "Bakertop Mind.Maps Plus"
   marchio: "Unox"
@@ -68,10 +69,10 @@
   ambito:
     - panificazione
     - pasticceria
-  cartella_immagini: unox
+  cartella_immagini: prodotti/unox
   immagini:
-    - "bakertop-front.webp"
-    - "bakertop-detail.webp"
+    - "bakertop-10-teglie.webp"
+    - "bakertop-carrellato.webp"
 
 - nome: "Cheftop X"
   marchio: "Unox"
@@ -83,7 +84,7 @@
   ambito:
     - ristorazione
     - gastronomia
-  cartella_immagini: unox
+  cartella_immagini: prodotti/unox
   immagini:
-    - "cheftop-x-front.webp"
-    - "cheftop-x-detail.webp"
+    - "cheftop-x.webp"
+    - "interactive-cooking-cheftop-x.webp"

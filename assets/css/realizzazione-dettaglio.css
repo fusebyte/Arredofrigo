@@ -101,6 +101,8 @@
 .tipo-badge.pesce { background: #17a2b8; }
 .tipo-badge.panificazione { background: #d7cf39; }
 
+.badge-ambito{background: #968686;}
+
 .header-stats {
   display: flex;
   gap: 1.5rem;
