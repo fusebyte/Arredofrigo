@@ -1,0 +1,77 @@
+- nome: "Serie S"
+  marchio: "Moretti Forni"
+  nome_completo: "Moretti Serie S"
+  descrizione: "Forno statico elettrico con tecnologia Eco SmartBaking, risparmio energetico fino al 30%, gestione intuitiva e design in acciaio inox. Ideale per pizza, pane e pasticceria."
+  tipo: "forno statico"
+  ambito: 
+    - pizzeria
+    - panificazione
+    - pasticceria
+  cartella_immagini: prodotti/moretti-forni
+  immagini:
+    - "moretti-serie-s-primo-piano.webp"
+    - "colonna-serie-s-con-lievitatore-e-cappa.webp"
+
+- nome: "Neapolis"
+  marchio: "Moretti Forni"
+  nome_completo: "Moretti Neapolis 510°C"
+  descrizione: "Il forno elettrico per pizza napoletana più potente al mondo, raggiunge 510°C per una cottura perfetta in meno di un minuto."
+  tipo: "forno statico"
+  ambito:
+    - pizzeria
+  cartella_immagini: prodotti/moretti-forni
+  immagini:
+    - "neapolis.webp"
+    - "neapolis-dettaglio.webp"
+
+- nome: "Serie P"
+  marchio: "Moretti Forni"
+  nome_completo: "Moretti Serie P"
+  descrizione: "Forno statico versatile e robusto, ideale per pizza al taglio, in pala e panificazione. Controlli elettronici avanzati e alta affidabilità."
+  tipo: "forno statico"
+  ambito:
+    - pizzeria
+    - panificazione
+  cartella_immagini: prodotti/moretti-forni
+  immagini:
+    - "moretti-serie-P.webp"
+
+- nome: "Cheftop Mind.Maps Plus"
+  marchio: "Unox"
+  nome_completo: "Unox Cheftop Mind.Maps Plus"
+  descrizione: "Forno combinato professionale con tecnologia Mind.Maps™, cotture uniformi e programmi personalizzabili. Perfetto per ristorazione e gastronomie."
+  tipo: "forno combinato"
+  ambito:
+    - ristorazione
+    - gastronomia
+    - pasticceria
+  cartella_immagini: unox
+  immagini:
+    - "cheftop-mindmaps-plus-front.webp"
+    - "cheftop-mindmaps-plus-panel.webp"
+
+- nome: "Bakertop Mind.Maps Plus"
+  marchio: "Unox"
+  nome_completo: "Unox Bakertop Mind.Maps Plus"
+  descrizione: "Forno combinato Unox specifico per panificazione e pasticceria, con cottura uniforme, risparmio energetico e controllo totale del processo."
+  tipo: "forno combinato"
+  ambito:
+    - panificazione
+    - pasticceria
+  cartella_immagini: unox
+  immagini:
+    - "bakertop-front.webp"
+    - "bakertop-detail.webp"
+
+- nome: "Cheftop X"
+  marchio: "Unox"
+  nome_completo: "Unox Cheftop X"
+  descrizione: "Nuova generazione di forni combinati Unox: più intuitivi, connessi e sostenibili, per performance professionali in cucina."
+  tipo: "forno combinato"
+  ambito:
+    - ristorazione
+    - gastronomia
+  cartella_immagini: unox
+  immagini:
+    - "cheftop-x-front.webp"
+    - "cheftop-x-detail.webp"

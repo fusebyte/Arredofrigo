@@ -1,0 +1,20 @@
+<div class="prodotti-cards">
+{% for prodotto in include.prodotti %}
+  <div class="product-card">
+    <div class="card-img">
+      <img src="/assets/img/{{ prodotto.cartella_immagini }}/{{ prodotto.immagini[0] }}" alt="{{ prodotto.nome_completo }}">
+    </div>
+    <div class="card-body">
+      <h3>{{ prodotto.nome_completo }}</h3>
+      <p class="descrizione">{{ prodotto.descrizione }}</p>
+      <div class="ambiti">
+        {% for ambito in prodotto.ambito %}
+          <span class="badge">{{ ambito }}</span>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<link rel="stylesheet" href="/assets/css/products-cards.css">
