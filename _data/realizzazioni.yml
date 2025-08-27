@@ -340,6 +340,7 @@
   slug: "pescheria-lucca"
   cartella_foto: "pescheria-lucca"
   foto_copertina: "banco-pesce.webp"
+  disegno_cad: "disegno.webp"
   immagini:
     - banco-caldo.webp
     - cappa.webp

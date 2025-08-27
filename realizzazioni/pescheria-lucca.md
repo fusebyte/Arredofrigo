@@ -9,6 +9,7 @@ tipo:
     - pesce
 slug: "pescheria-lucca"
 cartella_foto: "pescheria-lucca"
+disegno_cad: "disegno.webp"
 foto_copertina: "banco-pesce.webp"
 immagini:
     - banco-caldo.webp
