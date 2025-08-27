@@ -1,12 +1,12 @@
 - image: assets/img/icons/icon-restaurant.svg
   title: Ristorazione
   text: Attrezzature per cucine professionali e arredi su misura.
-  url: /ristorazione
+  url: /progettazione-cucine-professionali
 
 - image: assets/img/icons/icon-gdo.svg
   title: GDO
   text: Soluzioni per supermercati e punti vendita.
-  url: /gdo
+  url: /supermercati
 
 - image: assets/img/icons/icon-mepa.svg
   title: MEPA
