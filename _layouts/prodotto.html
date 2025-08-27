@@ -2,25 +2,88 @@
 layout: default
 ---
 
-<article class="product-page">
-  <h1>{{ page.nome_completo }}</h1>
-  <p><strong>Marchio:</strong> {{ page.marchio | capitalize }}</p>
-  <div class="descrizione">{{ page.descrizione }}</div>
 
-  <div class="ambiti">
-    {% for ambito in page.ambito %}
-      <span class="badge">{{ ambito }}</span>
-    {% endfor %}
+<link rel="stylesheet" href="{{ '/assets/css/realizzazione-dettaglio.css' | relative_url }}">
+<script src="{{ '/assets/js/lightbox.js' | relative_url }}" defer></script>
+
+
+<!-- Breadcrumb -->
+<!-- <nav class="breadcrumb">
+  <a href="/">Home</a>
+  <span class="separator">›</span>
+  <a href="/prodotti.html">Prodotti</a>
+  <span class="separator">›</span>
+  <span class="current">{{ page.nome_completo }}</span>
+</nav> -->
+
+
+<div class="realizzazione-dettaglio">
+  <div class="realizzazione-header">
+    <div class="header-content">
+      <div class="header-text">
+        <h1>{{ page.nome_completo }}</h1>
+        <div class="realizzazione-meta">
+          <p class="realizzazione-location"><strong>Marchio:</strong> <span style="color:#f20000;">{{ page.marchio | capitalize }}</span></p>
+          {% if page.ambito %}
+          <div class="tipi-badges ambiti">
+            {% for ambito in page.ambito %}
+              <span class="tipo-badge badge {{ambito}}">{{ ambito }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+        <div class="descrizione">{{ page.descrizione }}</div>
+      </div>
+      {% if page.immagini and page.immagini.size > 0 %}
+      <div class="header-stats">
+        <div class="stat-item">
+          <span class="stat-number">{{ page.immagini.size }}</span>
+          <span class="stat-label">Immagini</span>
+        </div>
+      </div>
+      {% endif %}
+    </div>
   </div>
 
-  <div class="galleria">
-    {% for img in page.immagini %}
-      <img src="/assets/img/{{ page.cartella_immagini }}/{{ img }}"
-           alt="{{ page.nome_completo }}"
-           style="aspect-ratio:4/3; object-fit:cover;">
-    {% endfor %}
+  {% if page.immagini %}
+  <section class="gallery-section">
+    <div class="foto-grid">
+      {% for img in page.immagini %}
+        {% assign nome_pulito = img | split: '.' | first | replace: '-', ' ' | replace: '_', ' ' %}
+        <div class="foto-item" onclick="openLightbox({{ forloop.index0 }})">
+          <img src="/assets/img/{{ page.cartella_immagini }}/{{ img }}"
+               alt="{{ page.nome_completo }} - {{ img }}"
+               class="foto-preview galleria-item"
+               loading="lazy">
+          <div class="foto-overlay">
+            <div class="foto-info">
+              <p class="foto-nome">{{ nome_pulito | capitalize }}</p>
+              <span class="zoom-icon">🔍</span>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+      <img id="lightbox-image" src="" alt="">
+      <div id="lightbox-description" class="lightbox-description"></div>
+      <button class="lightbox-nav lightbox-prev" onclick="navigateImage(-1)">&#10094;</button>
+      <button class="lightbox-nav lightbox-next" onclick="navigateImage(1)">&#10095;</button>
+      <div id="lightbox-counter" class="lightbox-counter"></div>
+      <div class="lightbox-help">
+        <div>🖱️ Rotella: Zoom</div>
+        <div>🖱️ Trascina: Sposta</div>
+        <div>↕️ Frecce: Naviga</div>
+        <div>2× Click: Reset</div>
+      </div>
+    </div>
   </div>
-</article>
+</div>
 
-
-<link rel="stylesheet" href="/assets/css/products-cards.css">
+<link rel="stylesheet" href="{{ '/assets/css/realizzazione-dettaglio.css' | relative_url }}">
