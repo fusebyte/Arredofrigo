@@ -1,8 +1,10 @@
+{% assign justNavBar = include.justNavBar | default: false %}
 <header class="site-header">
+  {% if justNavBar == false%}
   <div class="header-top">
     <div class="logo-section">
       <a href="{{ '/' | relative_url }}">
-        <img src="{{ '/assets/img/logo.webp' | relative_url }}" alt="Logo Arredofrigo" class="logo-img">
+        <img src="{{ '/assets/img/logo/ArredofrigoLogoSfondo.svg' | relative_url }}" alt="Logo Arredofrigo" class="logo-img">
       </a>
       <div class="tagline">Attrezzature per la ristorazione</div>
     </div>
@@ -26,6 +28,7 @@
       
     </div>
   </div>
+  {% endif %}
   
   <nav class="main-nav">
     <a href="{{ '/' | relative_url }}">Home</a>

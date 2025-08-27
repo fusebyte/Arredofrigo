@@ -95,7 +95,7 @@ p {
 
 /* Navigation */
 .main-nav {
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -112,6 +112,7 @@ p {
 .main-nav a:hover {
   background: rgb(23 39 59);
   transform: translateY(-2px);
+  border-radius: 8px;
   color: var(--brand-red);
 }
 

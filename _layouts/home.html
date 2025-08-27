@@ -6,15 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }} | Arredofrigo</title>
   <meta name="description" content="{{ page.description | default: site.description }}">
+  <!-- <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}"> -->
   <link rel="stylesheet" href="{{ '/assets/css/default-style.css' | relative_url }}">
   <link rel="shortcut icon" type="image/x-icon"
-    href="{{ '/assets/img/cropped-favicon-sito-32x32.png' | relative_url }}">
+    href="{{ '/assets/img/cropped-favicon-sito-32x32.webp' | relative_url }}">
   <script data-goatcounter="https://arredofrigo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <link rel="stylesheet" href="{{ '/assets/css/hero-banner.css' | relative_url }}">
+
 </head>
 
 <body>
 
-  {% include header.html %}
+  <div class="hero-banner">
+    <div class="pattern-background"></div>
+        <img src="assets/img/banner-home.png" alt="hero-image" class="hero-img"></img>
+    <img src="assets/img/logo/ArredofrigoLogoSfondo.svg" class="hero-logo"></img>
+  </div>
+
+  {% include header.html 
+    justNavBar = true
+  %}
   
     {{ content }}
   
