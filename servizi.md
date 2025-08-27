@@ -13,7 +13,8 @@ Da oltre trent’anni, offriamo un servizio completo per la realizzazione e la g
 {% capture contenuto %}
 Ogni cucina è unica e nasce da un ascolto attento delle esigenze del cliente.  
 Il nostro servizio di progettazione parte da un confronto diretto per comprendere gli obiettivi, gli spazi e il tipo di attività.  
-Successivamente eseguiamo un sopralluogo tecnico, elaboriamo una proposta in CAD con distribuzione funzionale delle attrezzature e seguiamo i lavori fino alla messa in opera, garantendo sempre il rispetto delle normative vigenti in materia di sicurezza, igiene e flussi operativi.
+Successivamente eseguiamo un sopralluogo tecnico, elaboriamo una proposta in CAD con distribuzione funzionale delle attrezzature e seguiamo i lavori fino alla messa in opera, garantendo sempre il rispetto delle normative vigenti in materia di sicurezza, igiene e flussi operativi. 
+Per saperne di più, vedi la pagina [Progettazione Cucine Professionali](/progettazione-cucine-professionali).
 {% endcapture %}
 
 {% include image-text-block.html 
@@ -56,9 +57,18 @@ Il lavoro viene eseguito da personale specializzato, con attenzione a ogni detta
 %}
 
 ## Impianti di aspirazione e canalizzazione
-
+{% capture contenuto %}
 Progettiamo e realizziamo impianti di aspirazione personalizzati per cucine professionali.  
 Ci occupiamo di tutto: calcolo delle portate, sezioni dei canali, scelta dei motori e dei sistemi di filtrazione, installazione e collaudo. Ogni impianto è pensato per garantire efficienza energetica, comfort per il personale e conformità alle normative.
+{% endcapture %}
+
+{% include image-text-block.html 
+   text=contenuto
+   img_src="/assets/img/impianto-di-aspirazione.webp" 
+   img_alt="Impianti di aspirazione e canalizzazione" 
+   img_class="img-base"
+   img_side="right"
+%}
 
 ## Consegna rapida
 
@@ -66,14 +76,32 @@ Abbiamo a disposizione un magazzino fornito con attrezzature pronte per la conse
 In caso di urgenze, siamo in grado di offrire il ritiro in sede o una consegna rapida.
 
 ## Formazione e supporto
-
+{% capture contenuto %}
 Affianchiamo i nostri clienti anche dopo l’installazione. Offriamo supporto tecnico, formazione sull’utilizzo delle attrezzature e assistenza continua. Il nostro obiettivo è garantire il massimo rendimento degli impianti e la massima autonomia operativa del personale.
+{% endcapture %}
+
+{% include image-text-block.html 
+   text=contenuto
+   img_src="/assets/img/formazione-e-supporto.webp" 
+   img_alt="Formazione e supporto sulle attrezzature" 
+   img_class="img-base"
+   img_side="left"
+%}
 
 ## Demo pratiche su attrezzature
-
+{% capture contenuto %}
 Organizziamo regolarmente dimostrazioni pratiche delle principali attrezzature professionali, presso il nostro showroom o direttamente in loco.  
 Le demo sono un’occasione concreta per vedere le macchine in azione, scoprire le funzionalità avanzate e valutarne le prestazioni reali prima dell’acquisto.  
 Questo servizio è particolarmente utile per ristoratori, cuochi e operatori del settore che desiderano investire con consapevolezza su prodotti realmente adatti alle proprie esigenze. Consulta la pagina [demo forni Unox](/demo-forni-unox) per maggiori dettagli sulle demo dei forni a convezione Unox.
+{% endcapture %}
+
+{% include image-text-block.html 
+   text=contenuto
+   img_src="/assets/img/demo-forni-unox.webp" 
+   img_alt="Dimostrazioni attrezzature presso la nostra sede" 
+   img_class="img-base"
+   img_side="right"
+%}
 
 ## I nostri marchi
 
