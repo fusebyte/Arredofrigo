@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<article class="product-page">
+  <h1>{{ page.nome_completo }}</h1>
+  <p><strong>Marchio:</strong> {{ page.marchio | capitalize }}</p>
+  <div class="descrizione">{{ page.descrizione }}</div>
+
+  <div class="ambiti">
+    {% for ambito in page.ambito %}
+      <span class="badge">{{ ambito }}</span>
+    {% endfor %}
+  </div>
+
+  <div class="galleria">
+    {% for img in page.immagini %}
+      <img src="/assets/img/{{ page.cartella_immagini }}/{{ img }}"
+           alt="{{ page.nome_completo }}"
+           style="aspect-ratio:4/3; object-fit:cover;">
+    {% endfor %}
+  </div>
+</article>
+
+
+<link rel="stylesheet" href="/assets/css/products-cards.css">

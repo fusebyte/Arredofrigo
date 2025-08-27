@@ -1,5 +1,7 @@
 - nome: "Serie S"
   marchio: "Moretti Forni"
+  marchio-slug: "moretti"
+  nome-slug: "serie-s"
   nome_completo: "Moretti Serie S"
   descrizione: "Forno statico elettrico con tecnologia Eco SmartBaking, risparmio energetico fino al 30%, gestione intuitiva e design in acciaio inox. Ideale per pizza, pane e pasticceria."
   tipo: "forno statico"
@@ -14,6 +16,8 @@
 
 - nome: "Neapolis"
   marchio: "Moretti Forni"
+  marchio-slug: "moretti"
+  nome-slug: "neapolis"
   nome_completo: "Moretti Neapolis 510°C"
   descrizione: "Il forno elettrico per pizza napoletana più potente al mondo, raggiunge 510°C per una cottura perfetta in meno di un minuto."
   tipo: "forno statico"
@@ -26,6 +30,8 @@
 
 - nome: "Serie P"
   marchio: "Moretti Forni"
+  marchio-slug: "moretti"
+  nome-slug: "serie-p"
   nome_completo: "Moretti Serie P"
   descrizione: "Forno statico versatile e robusto, ideale per pizza al taglio, in pala e panificazione. Controlli elettronici avanzati e alta affidabilità."
   tipo: "forno statico"
@@ -38,6 +44,8 @@
 
 - nome: "Cheftop Mind.Maps Plus"
   marchio: "Unox"
+  marchio-slug: "unox"
+  nome-slug: "cheftop-mind-maps-plus"
   nome_completo: "Unox Cheftop Mind.Maps Plus"
   descrizione: "Forno combinato professionale con tecnologia Mind.Maps™, cotture uniformi e programmi personalizzabili. Perfetto per ristorazione e gastronomie."
   tipo: "forno combinato"
@@ -52,6 +60,8 @@
 
 - nome: "Bakertop Mind.Maps Plus"
   marchio: "Unox"
+  marchio-slug: "unox"
+  nome-slug: "bakertop-mind-maps-plus"
   nome_completo: "Unox Bakertop Mind.Maps Plus"
   descrizione: "Forno combinato Unox specifico per panificazione e pasticceria, con cottura uniforme, risparmio energetico e controllo totale del processo."
   tipo: "forno combinato"
@@ -65,6 +75,8 @@
 
 - nome: "Cheftop X"
   marchio: "Unox"
+  marchio-slug: "unox"
+  nome-slug: "cheftop-x"
   nome_completo: "Unox Cheftop X"
   descrizione: "Nuova generazione di forni combinati Unox: più intuitivi, connessi e sostenibili, per performance professionali in cucina."
   tipo: "forno combinato"

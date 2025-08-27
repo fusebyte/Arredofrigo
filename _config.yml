@@ -13,6 +13,7 @@ repository: arredofrigo/arredofrigo.it
 #twitter_username: arredofrigo
 plugins:
   - jekyll-include-cache
+  - jekyll-datapage-generator
 
 defaults:
   - scope:
@@ -65,3 +66,13 @@ exclude:
   - .bundle
   - vendor
   - script-utili
+
+page_gen-dirs: true
+
+page_gen:
+  - data: prodotti     # nome del file _data/prodotti.yml
+    template: prodotto  # layout in _layouts/prodotto.html
+    dir: "prodotti"   # cartella base, sotto verrà marchio/nome
+    name_expr: record['marchio-slug'] + '-' + record['nome-slug']
+    title: "nome_completo"
+    extension: "html"
