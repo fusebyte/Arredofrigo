@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: hero
 title: Demo forni Unox Mind.Maps
+hero_image: "assets/img/demo-forni-unox.webp"
 permalink: /demo-forni-unox/
 ---
 

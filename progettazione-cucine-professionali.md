@@ -1,5 +1,6 @@
 ---
-layout: default
+layout: hero
+hero_image: "assets/img/progetto-cad.webp"
 title: Progettazione Cucine Professionali
 ---
 
