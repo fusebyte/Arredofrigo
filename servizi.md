@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Servizi
-permalink: /servizi/
+permalink: /servizi
 ---
 
 # I nostri servizi
