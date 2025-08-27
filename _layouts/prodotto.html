@@ -67,6 +67,49 @@ layout: default
   </section>
   {% endif %}
 
+  
+  {% if page.ambito %}
+  <div class="realizzazioni-correlate prodotti-correlati">
+    <h3>🎯 Prodotti correlati</h3>
+    <div class="correlate-grid">
+      {% assign prodotti_filtrati = site.data.prodotti | where_exp:"item","item.nome_completo != page.nome_completo" %}
+      {% assign correlati = "" | split: "" %}
+
+      {% for prodotto in site.data.prodotti %}
+        {% if prodotto.nome_completo != page.nome_completo %}
+          {% assign has_common = false %}
+          {% for a in prodotto.ambito %}
+            {% if page.ambito contains a %}
+              {% assign has_common = true %}
+            {% endif %}
+          {% endfor %}
+          {% if has_common %}
+            {% assign correlati = correlati | push: prodotto %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+      {% assign correlati = correlati | sample: 3 %}
+
+      {% for prodotto in correlati %}
+        {% assign cartella = prodotto.cartella_immagini | prepend: '/assets/img/' %}
+        {% assign img = prodotto.immagini[0] %}
+        <div class="correlata-card">
+          <div class="correlata-image">
+            <img src="{{ cartella }}/{{ img }}" alt="{{ prodotto.nome_completo }}" loading="lazy">
+          </div>
+          <div class="correlata-info">
+            <h4>{{ prodotto.nome_completo }}</h4>
+            <p class="correlata-location">{{ prodotto.marchio }}</p>
+            <a href="/prodotti/{{ prodotto.nome_slug | default: prodotto.nome_completo | slugify }}.html" class="btn-correlata">Vedi dettagli</a>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+
   <!-- Lightbox -->
   <div id="lightbox" class="lightbox" onclick="closeLightbox()">
     <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
