@@ -1,31 +1,37 @@
 // Gestione menu espandibile Servizi
 
 document.addEventListener('DOMContentLoaded', function() {
-  var serviziDropdown = document.querySelector('.nav-dropdown');
-  var arrowSpan = serviziDropdown.querySelector('.dropdown-arrow');
-  var dropdownMenu = serviziDropdown.querySelector('.dropdown-menu');
+  var dropdowns = document.querySelectorAll('.nav-dropdown');
 
-  function openMenu() {
-    dropdownMenu.classList.add('open');
-    arrowSpan.classList.add('open');
-  }
-  function closeMenu() {
-    dropdownMenu.classList.remove('open');
-    arrowSpan.classList.remove('open');
-  }
+  dropdowns.forEach(function(dropdown) {
+    var arrowSpan = dropdown.querySelector('.dropdown-arrow');
+    var dropdownMenu = dropdown.querySelector('.dropdown-menu');
 
-  //arrowSpan.addEventListener('mouseenter', openMenu);
-  //arrowSpan.addEventListener('mouseleave', closeMenu);
-  arrowSpan.addEventListener('click', function(e) {
-    e.stopPropagation();
-    dropdownMenu.classList.toggle('open');
-    arrowSpan.classList.toggle('open');
+    arrowSpan.addEventListener('click', function(e) {
+      e.stopPropagation();
+      // Chiudi tutti gli altri menu
+      dropdowns.forEach(function(otherDropdown) {
+        if (otherDropdown !== dropdown) {
+          var otherMenu = otherDropdown.querySelector('.dropdown-menu');
+          var otherArrow = otherDropdown.querySelector('.dropdown-arrow');
+          otherMenu.classList.remove('open');
+          otherArrow.classList.remove('open');
+        }
+      });
+      dropdownMenu.classList.toggle('open');
+      arrowSpan.classList.toggle('open');
+    });
   });
 
-  // Chiudi il menu se si clicca fuori
+  // Chiudi tutti i menu se si clicca fuori
   document.addEventListener('click', function(e) {
-    if (!serviziDropdown.contains(e.target)) {
-      closeMenu();
-    }
+    dropdowns.forEach(function(dropdown) {
+      if (!dropdown.contains(e.target)) {
+        var dropdownMenu = dropdown.querySelector('.dropdown-menu');
+        var arrowSpan = dropdown.querySelector('.dropdown-arrow');
+        dropdownMenu.classList.remove('open');
+        arrowSpan.classList.remove('open');
+      }
+    });
   });
 });
