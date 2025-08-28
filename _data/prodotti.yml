@@ -88,3 +88,95 @@
   immagini:
     - "cheftop-x.webp"
     - "interactive-cooking-cheftop-x.webp"
+
+- nome: "Modi"
+  marchio: "Coldline"
+  marchio-slug: "coldline"
+  nome-slug: "modi-abbattitore"
+  nome_completo: "Coldline Modi"
+  descrizione: "Abbattitore di temperatura per la conservazione e il raffreddamento rapido degli alimenti."
+  tipo: "abbattitore"
+  ambito:
+    - ristorazione
+    - gastronomia
+    - pasticceria
+  cartella_immagini: prodotti/coldline
+  immagini:
+    - "abbattitore-coldline-modi.webp"
+
+- nome: "Levtronic"
+  marchio: "Coldline"
+  marchio-slug: "coldline"
+  nome-slug: "levtronic-fermalievita"
+  nome_completo: "Coldline Levtronic"
+  descrizione: "Sistema di fermalievitazione controllata per la panificazione e la pasticceria."
+  tipo: "fermalievita"
+  ambito:
+    - panificazione
+    - pasticceria
+  cartella_immagini: prodotti/coldline
+  immagini:
+    - "fermalievitazione-armadi-e-tavoli-levtronic-coldline.webp"
+    #- "levtronic-fermalievita.webp"
+
+- nome: "Armadi Frigo Master"
+  marchio: "Coldline"
+  marchio-slug: "coldline"
+  nome-slug: "armadi-frigo-master"
+  nome_completo: "Coldline Armadi Frigo Master"
+  descrizione: "Armadi frigoriferi professionali per la conservazione ottimale degli alimenti."
+  tipo: "armadio frigo"
+  ambito:
+    - ristorazione
+    - gastronomia
+    - pasticceria
+  cartella_immagini: prodotti/coldline
+  immagini:
+    - "armadio-frigorifero-Master-Coldline.webp"
+
+- nome: "Lavabicchieri Uniko"
+  marchio: "Krupps"
+  marchio-slug: "krupps"
+  nome-slug: "lavabicchieri-uniko"
+  nome_completo: "Krupps Lavabicchieri Uniko"
+  descrizione: "Lavabicchieri professionale per una pulizia rapida ed efficace."
+  tipo: "lavabicchieri"
+  ambito:
+    - ristorazione
+    - bar
+  cartella_immagini: prodotti/krupps
+  immagini:
+    - "lavabicchieri-krupps-uniko-EL42E.webp"
+
+# KRUPPS-capotte-EL60E
+
+- nome: "Lavastoviglie Capotte Uniko"
+  marchio: "Krupps"
+  marchio-slug: "krupps"
+  nome-slug: "lavastoviglie-capotte-uniko"
+  nome_completo: "Krupps Lavastoviglie Capotte Uniko"
+  descrizione: "Lavastoviglie a capotta professionale per una pulizia efficiente e risparmio energetico."
+  tipo: "lavastoviglie"
+  ambito:
+    - ristorazione
+    - bar
+  cartella_immagini: prodotti/krupps
+  immagini:
+    - "KRUPPS-capotte-EL60E.webp"
+    - "capotte-e-sistema-osmosi.webp"
+
+- nome: "Lavastoviglie a carico frontale Uniko"
+  marchio: "Krupps"
+  marchio-slug: "krupps"
+  nome-slug: "lavastoviglie-carico-frontale-uniko"
+  nome_completo: "Krupps Lavastoviglie a carico frontale Uniko"
+  descrizione: "Lavastoviglie a carico frontale professionale per una pulizia efficace e risparmio energetico."
+  tipo: "lavastoviglie"
+  ambito:
+    - ristorazione
+    - bar
+    - pasticceria
+  cartella_immagini: prodotti/krupps
+  immagini:
+    - "zona-lavaggio-krupps.webp"
+    - "capotte-lavastoviglie-sistema-osmosi.webp"

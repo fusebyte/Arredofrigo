@@ -1,17 +1,21 @@
 - nome: UNOX
   logo: unox.webp
-  url: https://www.unox.com/it_it/
+  homepage: True
+  url: /i-nostri-marchi#unox--innovazione-e-tecnologia-per-la-cucina-professionale #https://www.unox.com/it_it/
 
 - nome: Coldline
   logo: coldline.webp
-  url: https://www.coldline.it/
+  homepage: True
+  url: /i-nostri-marchi#coldline--abbattitori-e-refrigerazione-professionale #https://www.coldline.it/
 
 - nome: Krupps
   logo: krupps.webp
-  url: https://www.krupps.it/
+  homepage: True
+  url: /i-nostri-marchi#lavastoviglie-krupps--innovazione-e-affidabilità-per-la-ristorazione #https://www.krupps.it/
 
 - nome: Giorik
   logo: giorik.webp
+  homepage: True
   url: https://www.giorik.com/
 
 - nome: Olis
@@ -24,7 +28,8 @@
 
 - nome: Moretti
   logo: moretti.webp
-  url: https://www.morettiforni.it/
+  homepage: True
+  url: /i-nostri-marchi#moretti-forni--tradizione-e-innovazione #https://www.morettiforni.it/
 
 - nome: SAGI
   logo: sagi.svg
