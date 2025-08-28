@@ -180,3 +180,46 @@
   immagini:
     - "zona-lavaggio-krupps.webp"
     - "capotte-lavastoviglie-sistema-osmosi.webp"
+
+- nome: "Cucine Monoblocco"
+  marchio: "Giorik"
+  marchio-slug: "giorik"
+  nome-slug: "cucine-monoblocco"
+  nome_completo: "Cucine Monoblocco Giorik"
+  descrizione: "Cucine monoblocco professionali personalizzabili su misura per ogni esigenza."
+  tipo: "cucina"
+  ambito:
+    - ristorazione
+    - gastronomia
+  cartella_immagini: prodotti/giorik
+  immagini:
+    - "giorik-cucina-monoblocco.webp"
+
+- nome: "Forno Combinato Connesso"
+  marchio: "Giorik"
+  marchio-slug: "giorik"
+  nome-slug: "forno-combinato-connesso"
+  nome_completo: "Giorik Forno Combinato Connesso"
+  descrizione: "Forno combinato professionale connesso per una gestione intelligente della cottura."
+  tipo: "forno combinato"
+  ambito:
+    - ristorazione
+    - gastronomia
+    - pasticceria
+  cartella_immagini: prodotti/giorik
+  immagini:
+    - "forno-combinato-giorik.webp"
+
+- nome: "Cucina a gas modulare"
+  marchio: "Giorik"
+  marchio-slug: "giorik"
+  nome-slug: "cucina-gas-modulare"
+  nome_completo: "Giorik Cucina a gas Modulare"
+  descrizione: "Sistema di cottura modulare professionale per una flessibilità ottimale in cucina."
+  tipo: "cucina"
+  ambito:
+    - ristorazione
+    - gastronomia
+  cartella_immagini: prodotti/giorik
+  immagini:
+    - "01-cucinagas-giorik.webp"

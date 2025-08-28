@@ -85,3 +85,15 @@ Un aspetto distintivo delle lavastoviglie Krupps è il display Uniko, un’inter
 {% include products-cards.html 
    prodotti=prodotti_krupps
 %}
+
+## Giorik – Cottura Professionale
+
+Giorik è un marchio italiano che dal 1963 progetta e produce attrezzature professionali per la ristorazione, con oltre 60 anni di esperienza nell’innovazione tecnologica e nella qualità dei prodotti. La linea di cottura modulare Giorik offre soluzioni versatili e scalabili, perfette per adattarsi a qualsiasi esigenza di cucina professionale. Le cucine a gas assicurano massima produttività e facilità di pulizia, mentre le cucine elettriche e quelle a induzione garantiscono cottura rapida ed efficiente con il massimo controllo. I Fry Top e le griglie a pietra lavica permettono di cucinare in modo uniforme, l’Aqua-Grill sfrutta le proprietà dell’acqua per una cottura sana, e il bagnomaria consente di riscaldare o cuocere delicatamente gli alimenti. Il cuocipasta è ideale per gestire grandi quantità, mentre friggitrici, brasiere e pentole completano l’offerta con soluzioni robuste e durature, progettate per le cucine più esigenti.  
+
+Accanto alla linea di cottura, Giorik propone anche forni combinati e a vapore di alta qualità, pensati per completare le cucine professionali senza appesantire l’organizzazione dello spazio e garantendo risultati costanti.
+
+{% assign prodotti_giorik = site.data.prodotti | where: "marchio", "Giorik" %}
+  
+{% include products-cards.html 
+   prodotti=prodotti_giorik
+%}
