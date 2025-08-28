@@ -1,0 +1,72 @@
+{% comment %}
+Parametri che riceve:
+- titolo_tab -> opzionale, di default "🎯 Nostre realizzazioni correlate"
+- realizzazioni_correlate -> opzionale, se specificato, non fa altri filtraggi
+- sample -> numero di samples da mostrare, default 3
+- ambiti -> filtra le realizzazioni per ambiti specifici: il formato è "tipo1, tipo2, ..."
+
+{% endcomment %}
+
+{% assign num_samples = include.samples | default: 3 %}
+
+{% assign titolo_tab = include.titolo_tab | default: "🎯 Nostre realizzazioni correlate" %}
+
+{% if include.realizzazioni_correlate and include.realizzazioni_correlate.size > 0 %}
+
+    {% assign realizzazioni_correlate = include.realizzazioni_correlate %}
+
+{% else %}
+
+    {% assign realizzazioni = site.data.realizzazioni %}
+    {% assign correlati = "" | split: "" %}
+
+    {% if include.ambiti and include.ambiti != "" %}
+        {% assign ambiti = include.ambiti | split: "," %}
+
+        {% for realizzazione in realizzazioni %}
+            {% if realizzazione.nome != page.nome_completo %}
+            {% assign has_common = false %}
+            {% for a in realizzazione.tipo %}
+                {% if ambiti contains a %}
+                {% assign has_common = true %}
+                {% endif %}
+            {% endfor %}
+            {% if has_common %}
+                {% assign correlati = correlati | push: realizzazione %}
+            {% endif %}
+            {% endif %}
+        {% endfor %}
+
+    {% else %}
+
+        {% assign correlati = realizzazioni | sample: num_samples %}
+
+    {% endif %}
+
+    {% assign realizzazioni_correlate = correlati | sample: num_samples %}
+
+{% endif %}
+<div class="realizzazioni-correlate">
+    <h3>{{ titolo_tab }}</h3>
+    <div class="correlate-grid">
+
+        {% for realizzazione in realizzazioni_correlate %}
+        {% assign cartella_correlata = realizzazione.cartella_foto | default: realizzazione.nome | slugify | prepend: '/assets/img/realizzazioni/' %}
+        {% assign foto_correlata = realizzazione.foto_copertina | default: 'foto1.webp' %}
+
+        <div class="correlata-card">
+            <div class="correlata-image">
+                <img src="{{ cartella_correlata }}/{{ foto_correlata }}" alt="{{ realizzazione.nome }}" loading="lazy">
+            </div>
+            <div class="correlata-info">
+                <h4>{{ realizzazione.nome }}</h4>
+                <p class="correlata-location">📍 {{ realizzazione.citta }}</p>
+                <a href="/realizzazioni/{{ realizzazione.slug | default: realizzazione.nome | slugify }}.html"
+                    class="btn-correlata">Vedi dettagli</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<link rel="stylesheet" href="/assets/css/realizzazione-dettaglio.css">

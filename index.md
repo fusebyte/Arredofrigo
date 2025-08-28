@@ -60,6 +60,11 @@ title: Home
     </div>
 </section>
 
+{% include realizzazioni-correlate.html
+    titolo_tab = "Nostre realizzazioni"
+    samples = 5
+ %}
+
 <section class="banner-section section-gray">
   <div style="text-align: center;">
     <a href="contatti" class="btn-primary">
