@@ -1,9 +1,92 @@
-<div class="card-grid">
-  {% for target in site.data.targets %}
-    <a class="card" href="{{ target.url | relative_url }}">
-      <img src="{{ target.image | relative_url }}" alt="{{ target.title }}">
-      <h3>{{ target.title }}</h3>
-      <p>{{ target.text }}</p>
-    </a>
-  {% endfor %}
+<div class="card-grid infinite-scroll">
+  <div class="card-set {{ additional_class }}">
+    {% for element in include.content %}
+      <a class="card {{ include.class }}" href="{{ element.url | relative_url }}">
+        {% if element.image %}
+        <img src="{{ element.image | relative_url }}" alt="{{ element.title }}">
+        {% endif %}
+        <h3>{{ element.title }}</h3>
+        <p>{{ element.text }}</p>
+      </a>
+    {% endfor %}
+  </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const cardGrids = document.querySelectorAll('.card-grid.infinite-scroll');
+
+  cardGrids.forEach(grid => {
+    const cardSet = grid.querySelector('.card-set');
+    if (!cardSet) return;
+
+    let isRepositioning = false;
+    const originals = Array.from(cardSet.children);
+
+    function setupInfinite() {
+      // Clona le card solo se non sono già state clonate
+      if (cardSet.children.length === originals.length) {
+        for (let i = 0; i < 2; i++) {
+          originals.forEach(card => cardSet.appendChild(card.cloneNode(true)));
+        }
+      }
+
+      const originalCards = originals.length;
+      const cardWidth = originals[0] ? originals[0].offsetWidth + 32 : 0; // +margin
+      const setWidth = cardWidth * originalCards;
+
+      // Parti sempre dal gruppo centrale
+      grid.scrollLeft = setWidth;
+
+      const handleScroll = () => {
+        if (isRepositioning) return;
+        const scrollLeft = grid.scrollLeft;
+        const threshold = 50;
+
+        const repositionScroll = (direction) => {
+          isRepositioning = true;
+          grid.style.scrollBehavior = 'auto';
+          grid.style.scrollSnapType = 'none';
+
+          const adjustment = direction === 'right' ? -setWidth : setWidth;
+          grid.scrollLeft = scrollLeft + adjustment;
+
+          requestAnimationFrame(() => {
+            grid.style.scrollBehavior = 'smooth';
+            grid.style.scrollSnapType = 'x mandatory';
+            isRepositioning = false;
+          });
+        };
+
+        if (scrollLeft > setWidth * 2 - threshold) {
+          repositionScroll('right');
+        } else if (scrollLeft < threshold) {
+          repositionScroll('left');
+        }
+      };
+
+      grid.removeEventListener('scroll', handleScroll);
+      grid.addEventListener('scroll', handleScroll, { passive: true });
+    }
+
+    function setupDesktop() {
+      // Mostra solo il set originale
+      Array.from(cardSet.children).forEach((card, index) => {
+        card.style.display = index < originals.length ? '' : 'none';
+      });
+      grid.scrollLeft = 0;
+    }
+
+    function handleResponsive() {
+      if (window.innerWidth <= 768) {
+        setupInfinite();
+      } else {
+        setupDesktop();
+      }
+    }
+
+    handleResponsive();
+    window.addEventListener('resize', handleResponsive);
+  });
+});
+</script>

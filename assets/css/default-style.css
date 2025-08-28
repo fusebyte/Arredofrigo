@@ -273,53 +273,6 @@ footer {
 
 /* Fine Specifico stile per pagina fornitori con griglia */
 
-/* GRID */
-.card-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* centra righe parziali */
-  gap: 2rem;
-  /* max-width: 1100px; */
-  margin: 3rem auto;
-  padding: 0 1rem;
-}
-
-.card {
-  flex: 1 1 220px;    /* cresce, si restringe, base 220px */
-  max-width: 260px;   /* max larghezza */
-  min-width: 220px;   /* min larghezza */
-  background: #fff;
-  border-radius: 8px;
-  text-align: center;
-  padding: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-sizing: border-box;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 14px rgba(0,0,0,0.12);
-}
-
-.card img {
-  max-width: 80px;
-  margin-bottom: 1rem;
-}
-
-.card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-
-.card p {
-  font-size: 0.95rem;
-  color: #555;
-}
-
-/* Fine GRID */
 
 /* Button styles */
 .btn-primary {
@@ -432,13 +385,16 @@ footer {
   background: linear-gradient(90deg, var(--section-blue-border-start) 0%, var(--section-blue-border-end) 100%);
   height: 4px;
 }
-
+.section-gray h2,
 .section-blue h2 {
   text-align: center;
-  color: var(--brand-blue);
   margin-bottom: 2rem;
   font-size: 2rem;
   font-weight: 700;
+}
+
+.section-blue h2{
+  color: var(--brand-blue);
 }
 
 
@@ -457,7 +413,13 @@ footer {
     padding: 2rem 0;
   }
   
+  .section-gray,
   .section-blue h2 {
     font-size: 1.5rem;
   }
+}
+
+.link-no-decoration{
+  color: inherit;
+  text-decoration: unset;
 }
