@@ -39,3 +39,10 @@ A questo punto viene la fase di realizzazione della cucina, che, nei casi in cui
 ### consulenza e assistenza impiantistica sul cantiere
 
 In questa fase Arredofrigo dialoga con le aziende di impiantistica circa la disposizione dei collegamenti e delle predisposizioni necessarie per la cucina progettata, inoltre dà consulenza al cliente, ad esempio per quanto riguarda il rispetto delle normative di igiene per il rivestimento da adottare.
+
+{% assign realizzazioni_correlate = site.data.realizzazioni | where_exp: "item", "item.disegno_cad" | sample : 6 %}
+
+{% include realizzazioni-correlate.html
+    titolo_tab = "Realizzazioni con disegno CAD"
+    realizzazioni_correlate = realizzazioni_correlate
+ %}
