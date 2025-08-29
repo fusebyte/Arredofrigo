@@ -14,6 +14,7 @@ repository: arredofrigo/arredofrigo.it
 plugins:
   - jekyll-include-cache
   - jekyll-datapage-generator
+  - jekyll-sitemap
 
 defaults:
   - scope:
