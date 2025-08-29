@@ -10,7 +10,11 @@ Collaboriamo con i migliori brand del settore della ristorazione professionale. 
 
 <div class="grid-marchi">
   {% for marchio in site.data.marchi %}
-    <a href="{{ marchio.url }}" target="_blank" class="marchio">
+  {% assign new_tab = marchio.new_tab %}
+  {% if new_tab == nil or new_tab == "" %}
+    {% assign new_tab = true %}
+  {% endif %}
+    <a href="{{ marchio.url }}" {% if new_tab %}target="_blank"{% endif %} class="marchio">
       <img src="/assets/img/loghi-fornitori/{{ marchio.logo }}" alt="{{ marchio.nome }}" />
     </a>
   {% endfor %}
