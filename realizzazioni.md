@@ -28,6 +28,7 @@ permalink: /realizzazioni
       <option value="supermercato">Supermercati</option>
       <option value="mensa">Mense Aziendali</option>
       <option value="pesce">Pesce</option>
+      <option value="orientale">Ristoranti Orientali</option>
     </select>
   </div>
   <div class="cad-filter-container">

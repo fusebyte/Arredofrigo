@@ -85,7 +85,8 @@
   ordinamento: 40
   tipo: 
     - "ristorante"
-    - pesce
+    - "pesce"
+    - "orientale"
   slug: "yuki-sushi"
   cartella_foto: "yuki-sushi"
   foto_copertina: "cucina-1.webp"

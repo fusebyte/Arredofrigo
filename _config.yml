@@ -3,14 +3,12 @@ email: info@arredofrigo.net
 description: >-
   Progettazione ambienti e Attrezzature professionali, cucine, arredamenti per ristoranti, bar e pizzerie.
 baseurl: "" # lascia vuoto se usi dominio personalizzato
-url: "https://arredofrigo.it"
+url: "https://arredofrigo.net"
 theme: jekyll-theme-minimal
 locale: it-IT
 
 # SEO
 logo: /assets/img/logo.webp
-repository: arredofrigo/arredofrigo.it
-#twitter_username: arredofrigo
 plugins:
   - jekyll-include-cache
   - jekyll-datapage-generator

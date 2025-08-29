@@ -16,7 +16,8 @@ function getTipiBadges(tipi) {
     'agriturismo' : { emoji: '🌾', label: 'Agriturismo', class: 'agriturismo' },
     'supermercato' : { emoji: '🛒', label: 'Supermercato', class: 'supermercato' },
     'mensa' : { emoji: '🍽️', label: 'Mensa Aziendale', class: 'mensa' },
-    'pesce' : { emoji: '🐟', label: 'Pesce', class: 'pesce' }
+    'pesce' : { emoji: '🐟', label: 'Pesce', class: 'pesce' },
+    'orientale' : { emoji: '🍣', label: 'Orientale', class: 'orientale' }
   };
   
   // Se tipi è una stringa, la convertiamo in array
