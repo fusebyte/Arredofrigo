@@ -35,47 +35,8 @@ Il nostro team è a disposizione per guidarti passo dopo passo nella procedura d
 
 Per maggiori informazioni [contattaci](/contatti).
 
-<div class="realizzazioni-correlate">
-    <h3>🎯 Nostre realizzazioni correlate</h3>
-    <div class="correlate-grid">
-            {% assign realizzazioni = site.data.realizzazioni %}
-        {% assign correlati = "" | split: "" %}
-
-        {% assign ambiti = "scuola alberghiera" | split: "," %}
-
-        {% for realizzazione in realizzazioni %}
-            {% if realizzazione.nome != page.nome_completo %}
-            {% assign has_common = false %}
-            {% for a in realizzazione.tipo %}
-                {% if ambiti contains a %}
-                {% assign has_common = true %}
-                {% endif %}
-            {% endfor %}
-            {% if has_common %}
-                {% assign correlati = correlati | push: realizzazione %}
-            {% endif %}
-            {% endif %}
-        {% endfor %}
-
-        {% assign realizzazioni_correlate = correlati | sample: 3 %}
-
-        {% for realizzazione in realizzazioni_correlate %}
-        {% assign cartella_correlata = realizzazione.cartella_foto | default: realizzazione.nome | slugify | prepend: '/assets/img/realizzazioni/' %}
-        {% assign foto_correlata = realizzazione.foto_copertina | default: 'foto1.webp' %}
-
-        <div class="correlata-card">
-            <div class="correlata-image">
-                <img src="{{ cartella_correlata }}/{{ foto_correlata }}" alt="{{ realizzazione.nome }}" loading="lazy">
-            </div>
-            <div class="correlata-info">
-                <h4>{{ realizzazione.nome }}</h4>
-                <p class="correlata-location">📍 {{ realizzazione.citta }}</p>
-                <a href="/realizzazioni/{{ realizzazione.slug | default: realizzazione.nome | slugify }}.html"
-                    class="btn-correlata">Vedi dettagli</a>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
-</div>
-
-<link rel="stylesheet" href="{{ '/assets/css/realizzazione-dettaglio.css' | relative_url }}">
+{% include realizzazioni-correlate.html
+    titolo_tab = "🎯 Nostre realizzazioni correlate"
+    ambiti = "scuola alberghiera"
+    samples = 6
+ %}
