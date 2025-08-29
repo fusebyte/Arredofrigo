@@ -21,6 +21,17 @@ Arredofrigo nasce nel 1990 a Pieve a Nievole, in provincia di Pistoia. La ditta 
 </main>
 
 <section class="banner-section section-blue">
+<main>
+{% include realizzazioni-selector.html
+    titolo = "Realizzazioni"
+    filtro_tipi = "ristorante,pizzeria,pasticceria,bar"
+    top_k = 10
+ %}
+ </main>
+ </section>
+
+
+<section class="banner-section section-gray">
   <h2>Servizi</h2>
 
   {% include card-grid.html
@@ -30,18 +41,14 @@ Arredofrigo nasce nel 1990 a Pieve a Nievole, in provincia di Pistoia. La ditta 
 
 </section>
 
-<section class="banner-section section-gray">
+<section class="banner-section section-red">
   <h2>Settori</h2>
   {% include card-grid.html
   content = site.data.targets
   %}
 </section>
 
-{% include realizzazioni-selector.html
-    titolo = "Realizzazioni"
-    filtro_tipi = "ristorante,pizzeria,pasticceria,bar"
-    top_k = 10
- %}
+
 
 <h2 style="text-align:center;">Marchi</h2>
 <div class="grid-marchi">

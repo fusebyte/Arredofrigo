@@ -23,6 +23,11 @@
     --section-blue-end: #f1f8fb;
     --section-blue-border-start: #0073aa;
     --section-blue-border-end: #00a0e4;
+    
+    --section-red-start: #fdf2f2;
+    --section-red-end: #fef5f5;
+    --section-red-border-start: #f30000;
+    --section-red-border-end: #ff4444;
 }
 
 body {
@@ -385,8 +390,19 @@ footer {
   background: linear-gradient(90deg, var(--section-blue-border-start) 0%, var(--section-blue-border-end) 100%);
   height: 4px;
 }
+
+/* Sezione Rossa */
+.section-red {
+  background: linear-gradient(135deg, var(--section-red-start) 0%, var(--section-red-end) 100%);
+}
+
+.section-red::before {
+  background: linear-gradient(90deg, var(--section-red-border-start) 0%, var(--section-red-border-end) 100%);
+  height: 4px;
+}
 .section-gray h2,
-.section-blue h2 {
+.section-blue h2,
+.section-red h2 {
   text-align: center;
   margin-bottom: 2rem;
   font-size: 2rem;
@@ -395,6 +411,10 @@ footer {
 
 .section-blue h2{
   color: var(--brand-blue);
+}
+
+.section-red h2{
+  color: #f30000;
 }
 
 
@@ -409,12 +429,14 @@ footer {
   }
   
   .section-gray,
-  .section-blue {
+  .section-blue,
+  .section-red {
     padding: 2rem 0;
   }
   
   .section-gray,
-  .section-blue h2 {
+  .section-blue h2,
+  .section-red h2 {
     font-size: 1.5rem;
   }
 }
