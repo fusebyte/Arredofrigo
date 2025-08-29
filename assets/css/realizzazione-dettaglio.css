@@ -762,9 +762,9 @@
     font-size: 0.9rem;
   }
   
-  .correlate-grid {
+  /* .correlate-grid {
     grid-template-columns: 1fr;
-  }
+  } */
   
   .tipi-badges {
     gap: 0.25rem;
