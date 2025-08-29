@@ -268,3 +268,45 @@
   cartella_immagini: prodotti/inoxbim
   immagini:
     - "cucina-a-induzione.webp"
+
+- nome: "Cucina Wok a Gas"
+  marchio: "Casta"
+  marchio-slug: "casta"
+  nome-slug: "wok"
+  nome_completo: "Casta Wok"
+  descrizione: "Wok professionale per una cottura versatile e sana."
+  tipo: "wok"
+  ambito:
+    - ristorazione
+    - orientale
+  cartella_immagini: prodotti/casta
+  immagini:
+    - "wok-casta.webp"
+
+- nome: "Piastra teppanyaki"
+  marchio: "Casta"
+  marchio-slug: "casta"
+  nome-slug: "piastra-teppanyaki"
+  nome_completo: "Casta Piastra Teppanyaki"
+  descrizione: "Piastra teppanyaki professionale per una cottura rapida e uniforme."
+  tipo: "piastra"
+  ambito:
+    - ristorazione
+    - orientale
+  cartella_immagini: prodotti/casta
+  immagini:
+    - "piastra-teppanyaki.webp"
+
+- nome: "Vaporiera dim sum"
+  marchio: "Casta"
+  marchio-slug: "casta"
+  nome-slug: "vaporiera-dim-sum"
+  nome_completo: "Casta Vaporiera Dim Sum"
+  descrizione: "Vaporiera professionale per la preparazione di dim sum e piatti al vapore."
+  tipo: "vaporiera"
+  ambito:
+    - ristorazione
+    - orientale
+  cartella_immagini: prodotti/casta
+  immagini:
+    - "vaporiera-dim-sum.webp"
