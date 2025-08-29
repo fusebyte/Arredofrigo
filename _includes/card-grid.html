@@ -12,6 +12,8 @@
   </div>
 </div>
 
+
+  {% if include.infinite %}
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const cardGrids = document.querySelectorAll('.card-grid.infinite-scroll');
@@ -20,26 +22,44 @@ document.addEventListener('DOMContentLoaded', function() {
     const cardSet = grid.querySelector('.card-set');
     if (!cardSet) return;
 
-    let isRepositioning = false;
     const originals = Array.from(cardSet.children);
+    let isInfiniteActive = false;
+    let isRepositioning = false;
+
+    function clearClones() {
+      // Rimuove tutte le card clonate
+      Array.from(cardSet.children).forEach((card, index) => {
+        if (index >= originals.length) card.remove();
+      });
+    }
 
     function setupInfinite() {
-      // Clona le card solo se non sono già state clonate
-      if (cardSet.children.length === originals.length) {
-        for (let i = 0; i < 2; i++) {
-          originals.forEach(card => cardSet.appendChild(card.cloneNode(true)));
-        }
+      if (isInfiniteActive) return; // evita setup multipli
+      clearClones();
+
+      // Clona le card 2 volte per creare il ciclo infinito
+      for (let i = 0; i < 2; i++) {
+        originals.forEach(card => cardSet.appendChild(card.cloneNode(true)));
       }
 
-      const originalCards = originals.length;
+      const originalCount = originals.length;
       const cardWidth = originals[0] ? originals[0].offsetWidth + 32 : 0; // +margin
-      const setWidth = cardWidth * originalCards;
+      const setWidth = cardWidth * originalCount;
 
-      // Parti sempre dal gruppo centrale
-      grid.scrollLeft = setWidth;
+      // Imposta lo scroll centrale *dopo il rendering*
+      requestAnimationFrame(() => {
+        grid.style.scrollBehavior = 'auto';
+        grid.scrollLeft = setWidth;
+        requestAnimationFrame(() => {
+          grid.style.scrollBehavior = 'smooth';
+        });
+      });
+
+      isInfiniteActive = true;
 
       const handleScroll = () => {
         if (isRepositioning) return;
+
         const scrollLeft = grid.scrollLeft;
         const threshold = 50;
 
@@ -70,11 +90,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function setupDesktop() {
-      // Mostra solo il set originale
-      Array.from(cardSet.children).forEach((card, index) => {
-        card.style.display = index < originals.length ? '' : 'none';
-      });
+      clearClones();
+      originals.forEach(card => card.style.display = '');
       grid.scrollLeft = 0;
+      isInfiniteActive = false;
     }
 
     function handleResponsive() {
@@ -89,4 +108,37 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', handleResponsive);
   });
 });
+</script>
+
+{% endif %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.card-set').forEach(cardSet => {
+      cardSet.addEventListener('wheel', function (e) {
+        // Se non c'è delta verticale, non facciamo niente
+        if (e.deltaY === 0) return;
+
+        const atStart = this.scrollLeft === 0;
+        const atEnd = this.scrollLeft + this.clientWidth >= this.scrollWidth;
+
+        // debug:
+        //console.log(`scrollLeft: ${this.scrollLeft}, scrollWidth: ${this.scrollWidth}, clientWidth: ${this.clientWidth}, atStart: ${atStart}, atEnd: ${atEnd}, deltaY: ${e.deltaY}`);
+        
+        // Se non siamo né all'inizio né alla fine, oppure se stiamo andando nella direzione "interna"
+        if (
+          ! (
+            (atEnd && e.deltaY > 0) ||   // stai scrollando verso sinistra ma sei già a inizio
+          (atStart && e.deltaY < 0)
+        )
+        ) {    // stai scrollando verso destra ma sei già a fine
+          e.preventDefault();
+          this.scrollLeft += (e.deltaY) * 10;
+          //console.log(`Nuovo scrollLeft: ${this.scrollLeft}`);
+        }
+        // altrimenti lasciamo che lo scroll vada alla pagina
+      }, { passive: false });
+    });
+
+  });
 </script>
