@@ -97,3 +97,12 @@ Accanto alla linea di cottura, Giorik propone anche forni combinati e a vapore d
 {% include products-cards.html 
    prodotti=prodotti_giorik
 %}
+
+## Inoxbim – Attrezzature Professionali per la Ristorazione
+
+**Inoxbim** è un marchio italiano con oltre 30 anni di esperienza nella produzione di attrezzature professionali in acciaio inox. L'azienda unisce artigianalità e innovazione tecnologica, offrendo soluzioni robuste e funzionali per cucine di ogni tipo. La linea di cottura comprende cucine a gas, piani cottura a induzione, Fry Top, griglie BBQ e cuocipasta, tutte progettate per prestazioni elevate, efficienza e facilità di manutenzione. Gli armadi per **dry aging** permettono di stagionare la carne in modo controllato, esaltandone sapore e tenerezza, mentre gli armadi **fermalievitazione** garantiscono impasti perfetti con cicli programmabili, ideali per panifici, pasticcerie e pizzerie. La gamma si completa con **abbattitori di temperatura, frigoriferi e celle**, oltre a **arredi neutri in acciaio** come tavoli, pensili, armadi e banchi di lavoro, pensati per ottimizzare gli spazi e rendere la cucina efficiente e sicura. Ogni prodotto Inoxbim è realizzato con materiali di alta qualità, garantendo durata, affidabilità e risultati professionali costanti.
+
+{% assign prodotti_inoxbim = site.data.prodotti | where: "marchio", "Inoxbim" %}
+{% include products-cards.html 
+   prodotti=prodotti_inoxbim
+%}

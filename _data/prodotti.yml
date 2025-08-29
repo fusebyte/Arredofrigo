@@ -222,4 +222,49 @@
     - gastronomia
   cartella_immagini: prodotti/giorik
   immagini:
+    - "cottura-da-alto.webp"
     - "01-cucinagas-giorik.webp"
+
+- nome: "Armadio Climatico MacChef"
+  marchio: "Inoxbim"
+  marchio-slug: "inoxbim"
+  nome-slug: "armadio-climatico-macchef"
+  nome_completo: "Inoxbim Armadio Climatico MacChef"
+  descrizione: "Armadio climatico professionale per la conservazione e stagionatura degli alimenti."
+  tipo: "armadio climatico"
+  ambito:
+    - ristorazione
+    - gastronomia
+  cartella_immagini: prodotti/inoxbim
+  immagini:
+    - "armadi-climatici-inoxbim.webp"
+    - "armadio-climatico-frollatura-pesce.webp"
+    - "armadio-climatico-render.webp"
+
+- nome: "Armadio frigo Classe Energetica A"
+  marchio: "Inoxbim"
+  marchio-slug: "inoxbim"
+  nome-slug: "armadio-frigo-classe-energetica-a"
+  nome_completo: "Inoxbim Armadio Frigo Classe Energetica A"
+  descrizione: "Armadio frigo professionale con Classe Energetica A per una maggiore efficienza."
+  tipo: "armadio frigo"
+  ambito:
+    - ristorazione
+    - gastronomia
+  cartella_immagini: prodotti/inoxbim
+  immagini:
+    - "armadio-frigo-classe-energetica-A.webp"
+
+- nome: "Cucine modulari"
+  marchio: "Inoxbim"
+  marchio-slug: "inoxbim"
+  nome-slug: "cucine-modulari"
+  nome_completo: "Inoxbim Cucine Modulari"
+  descrizione: "Cucine modulari professionali per una personalizzazione ottimale degli spazi."
+  tipo: "cucina"
+  ambito:
+    - ristorazione
+    - gastronomia
+  cartella_immagini: prodotti/inoxbim
+  immagini:
+    - "cucina-a-induzione.webp"
