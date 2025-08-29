@@ -24,6 +24,7 @@ function getTipiBadges(tipi) {
   const tipiArray = Array.isArray(tipi) ? tipi : [tipi];
   
   return tipiArray.map(tipo => {
+    if (tipo == 'arredamento') return '';
     const tipoInfo = tipiInfo[tipo] || { emoji: '🏪', label: 'Locale', class: 'default' };
     return `<span class="tipo-badge ${tipoInfo.class}">${tipoInfo.emoji} ${tipoInfo.label}</span>`;
   }).join(' ');

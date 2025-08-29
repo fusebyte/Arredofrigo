@@ -450,6 +450,7 @@
   ordinamento: 35
   tipo:
     - pizzeria
+    - arredamento
   slug: "buongustaio"
   cartella_foto: "buongustaio"
   foto_copertina: "bancone.webp"
