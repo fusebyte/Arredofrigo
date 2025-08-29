@@ -1,5 +1,6 @@
 - nome: "Pacino's"
   citta: Montecatini
+  ordinamento: 50
   tipo: 
     - "ristorante"
   cartella_foto: "pacinos"
@@ -20,6 +21,7 @@
 
 - nome: "Slitti Experience 🍫"
   citta: "Firenze"
+  ordinamento: 45
   tipo: 
     - "pasticceria"
     - "bar"
@@ -37,6 +39,7 @@
 
 - nome: "Locanda San Martino 🥩"
   citta: Montecarlo
+  ordinamento: 50
   tipo: 
     - "ristorante"
     - "bisteccheria"
@@ -56,6 +59,7 @@
 
 - nome: "Istituto Alberghiero Martini"
   citta: Montecatini
+  ordinamento: 50
   tipo: 
     - "scuola alberghiera"
   cartella_foto: "istituto-alberghiero-montecatini"
@@ -78,6 +82,7 @@
 
 - nome: "Yuki Sushi 🍣"
   citta: "Grosseto"
+  ordinamento: 40
   tipo: 
     - "ristorante"
     - pesce
@@ -97,6 +102,7 @@
 
 - nome: "Ristorante Il Melograno"
   citta: "Altopascio"
+  ordinamento: 40
   tipo: 
     - "ristorante"
     - pesce
@@ -117,6 +123,7 @@
 
 - nome: "Azienda Agricola Dai Papini"
   citta: Monsummano
+  ordinamento: 40
   tipo:
     - ristorante
     - agriturismo
@@ -136,6 +143,7 @@
 
 - nome: "Surgelati Madero"
   citta: "Pistoia"
+  ordinamento: 40
   tipo:
     - supermercato
     - pesce
@@ -156,6 +164,7 @@
 
 - nome: "Viale Verdi 54"
   citta: "Montecatini Terme"
+  ordinamento: 35
   tipo:
     - pasticceria
     - bar
@@ -172,6 +181,7 @@
 
 - nome: "Luna Rossa Pizza & Griglia"
   citta: "Pistoia"
+  ordinamento: 35
   tipo:
     - pizzeria
     - ristorante
@@ -189,6 +199,7 @@
 
 - nome: "La Cantinetta"
   citta: "Pistoia"
+  ordinamento: 35
   tipo:
     - ristorante
     - pizzeria
@@ -211,6 +222,7 @@
 
 - nome: "Villa Zelma"
   citta: "Serravalle"
+  ordinamento: 30
   tipo:
     - agriturismo
     - ristorante
@@ -229,6 +241,7 @@
 
 - nome: "Fortezza 59"
   citta: "Pistoia"
+  ordinamento: 40
   tipo:
     - ristorante
     - pizzeria
@@ -252,6 +265,7 @@
 
 - nome: "ngh bar"
   citta: "Castelfranco"
+  ordinamento: 40
   tipo:
     - ristorante
     - bar
@@ -275,6 +289,7 @@
 
 - nome: "Passatempo"
   citta: "Gambassi Terme"
+  ordinamento: 35
   tipo:
     - ristorante
     - pizzeria
@@ -297,6 +312,7 @@
 
 - nome: "Osteria del Maialetto"
   citta: "Monsummano Terme"
+  ordinamento: 40
   tipo:
     - ristorante
     - bisteccheria
@@ -319,6 +335,7 @@
 
 - nome: "Trattoria da Sandrino"
   citta: "Sorana"
+  ordinamento: 35
   tipo:
     - ristorante
   slug: "trattoria-da-sandrino"
@@ -336,6 +353,7 @@
 
 - nome: "Maroil"
   citta: "Altopascio"
+  ordinamento: 35
   tipo:
     - mensa
   slug: "maroil"
@@ -355,6 +373,7 @@
 
 - nome: "Pescheria Lucca"
   citta: "Lucca"
+  ordinamento: 40
   tipo:
     - supermercato
     - ristorante
@@ -377,6 +396,7 @@
 
 - nome: "Pizza Al Tegamino"
   citta: "Prato"
+  ordinamento: 30
   tipo:
     - pizzeria
   slug: "pizza-al-tegamino-prato"
@@ -394,6 +414,7 @@
 
 - nome: "Ristorante Prato"
   citta: "Prato"
+  ordinamento: 30
   tipo:
     - ristorante
   slug: "ristorante-prato"
@@ -408,6 +429,7 @@
 
 - nome: "Ristorante Da Carla"
   citta: "Sorana"
+  ordinamento: 30
   tipo:
     - ristorante
   slug: "ristorante-da-carla"
@@ -424,6 +446,7 @@
 
 - nome: "Il Buongustaio"
   citta: "Quarrata"
+  ordinamento: 35
   tipo:
     - pizzeria
   slug: "buongustaio"
@@ -438,6 +461,7 @@
 
 - nome: "Ristorante di Pesce 🐟"
   citta: "Pieve a Nievole"
+  ordinamento: 30
   tipo:
     - ristorante
     - pesce

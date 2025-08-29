@@ -1,0 +1,338 @@
+{% comment %}
+Parametri che riceve:
+- titolo -> opzionale, di default "Realizzazioni"
+- show_all -> se true, mostra il pulsante "Tutti", default true
+- filtro_tipi -> lista separata da virgole dei tipi da mostrare (opzionale)
+- top_k -> numero massimo di realizzazioni da mostrare nella vista default (default: 6)
+{% endcomment %}
+
+{% assign titolo = include.titolo | default: "Realizzazioni" %}
+{% assign show_all = include.show_all | default: true %}
+{% assign top_k = include.top_k | default: 6 %}
+
+<!-- Estrai i tipi da mostrare -->
+{% if include.filtro_tipi %}
+  {% assign tipi_da_mostrare = include.filtro_tipi | split: "," %}
+{% else %}
+  {% assign tipi_da_mostrare = "" | split: "" %}
+  {% for realizzazione in site.data.realizzazioni %}
+    {% for tipo in realizzazione.tipo %}
+      {% unless tipi_da_mostrare contains tipo %}
+        {% assign tipi_da_mostrare = tipi_da_mostrare | push: tipo %}
+      {% endunless %}
+    {% endfor %}
+  {% endfor %}
+{% endif %}
+{% assign tipi_da_mostrare = tipi_da_mostrare %}
+
+<!-- Prepara le realizzazioni ordinate per ordinamento decrescente -->
+{% assign realizzazioni_ordinate = site.data.realizzazioni | sort: 'ordinamento' | reverse %}
+
+<div class="realizzazioni-selector">
+  <h3>{{ titolo }}</h3>
+  
+    <!-- Filtri per tipo -->
+  <div class="filtri-tipi" id="filtri-tipi">
+    {% if show_all %}
+    <button class="tipo-btn active" data-tipo="default">
+      🏠 Esempi
+    </button>
+    {% endif %}
+    {% for tipo in tipi_da_mostrare %}
+    <button class="tipo-btn" data-tipo="{{ tipo }}">
+      {% case tipo %}
+        {% when 'ristorante' %}🍽️ Ristoranti
+        {% when 'pizzeria' %}🍕 Pizzerie
+        {% when 'bar' %}☕ Bar
+        {% when 'pasticceria' %}🥐 Pasticcerie
+        {% when 'bisteccheria' %}🥩 Bisteccherie
+        {% when 'scuola alberghiera' %}🎓 Scuole
+        {% when 'agriturismo' %}🌾 Agriturismi
+        {% when 'supermercato' %}🛒 Supermercati
+        {% when 'mensa' %}🍱 Mense
+        {% when 'pesce' %}🐟 Pesce
+        {% else %}{{ tipo | capitalize }}
+      {% endcase %}
+    </button>
+    {% endfor %}
+    
+    <!-- Tasto per andare alla pagina completa realizzazioni -->
+    <a href="/realizzazioni" class="tipo-btn tipo-btn-link">
+      📋 Tutti
+    </a>
+  </div>
+
+  <!-- Lista realizzazioni scrollabile -->
+  <div class="realizzazioni-horizontal-list" id="realizzazioni-list">
+    {% comment %} Carica tutte le realizzazioni nel DOM ma mostra solo quelle appropriate {% endcomment %}
+    {% for realizzazione in realizzazioni_ordinate %}
+      {% assign cartella = realizzazione.cartella_foto | default: realizzazione.nome | slugify | prepend: '/assets/img/realizzazioni/' %}
+      {% assign foto = realizzazione.foto_copertina | default: 'foto1.webp' %}
+      {% assign ordinamento_val = realizzazione.ordinamento | default: 0 %}
+      
+      <div class="realizzazione-card" 
+           data-tipi="{{ realizzazione.tipo | join: ',' }}"
+           data-ordinamento="{{ ordinamento_val }}"
+           data-index="{{ forloop.index0 }}">
+        <div class="realizzazione-image">
+          <img src="{{ cartella }}/{{ foto }}" alt="{{ realizzazione.nome }}" loading="lazy">
+        </div>
+        <div class="realizzazione-info">
+          <h4>{{ realizzazione.nome }}</h4>
+          <p class="realizzazione-location">📍 {{ realizzazione.citta }}</p>
+          <div class="realizzazione-tags">
+            {% for tipo in realizzazione.tipo %}
+            <span class="tipo-tag">{{ tipo }}</span>
+            {% endfor %}
+          </div>
+          <a href="/realizzazioni/{{ realizzazione.slug | default: realizzazione.nome | slugify }}.html" 
+             class="btn-realizzazione">Vedi dettagli</a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+.realizzazioni-selector {
+  margin: 2rem 0;
+}
+
+.realizzazioni-selector h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.tipo-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
+}
+
+.tipo-btn {
+  background: #f8f9fa;
+  border: 2px solid #e1e5e9;
+  border-radius: 25px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  color: #555;
+}
+
+.tipo-btn:hover {
+  background: #e9ecef;
+  border-color: #adb5bd;
+}
+
+.tipo-btn.active {
+  background: #0073aa;
+  color: white;
+  border-color: #0073aa;
+}
+
+.tipo-btn-link {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.tipo-btn-link:hover {
+  text-decoration: none;
+}
+
+.realizzazioni-horizontal-list {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.realizzazioni-horizontal-list::-webkit-scrollbar {
+  height: 8px;
+}
+
+.realizzazioni-horizontal-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.realizzazioni-horizontal-list::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.realizzazioni-horizontal-list::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+.realizzazione-card {
+  flex: 0 0 280px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid #e1e5e9;
+  display: flex;
+  flex-direction: column;
+}
+
+.realizzazione-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.realizzazione-image {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.realizzazione-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.realizzazione-card:hover .realizzazione-image img {
+  transform: scale(1.05);
+}
+
+.realizzazione-info {
+  padding: 1rem;
+}
+
+.realizzazione-info h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.realizzazione-location {
+  margin: 0 0 0.8rem 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.realizzazione-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.tipo-tag {
+  background: #e9ecef;
+  color: #495057;
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.btn-realizzazione {
+  display: inline-block;
+  background: #0073aa;
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 0.3s ease;
+  /* width: 100%; */
+  text-align: center;
+}
+
+.btn-realizzazione:hover {
+  background: #005a87;
+  text-decoration: none;
+  color: white;
+}
+
+.realizzazione-card.hidden {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tipo-filters {
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding: 0 1rem;
+  }
+  
+  .realizzazione-card {
+    flex: 0 0 250px;
+  }
+  
+  .tipo-btn {
+    flex-shrink: 0;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const tipoBtns = document.querySelectorAll('.tipo-btn');
+  const realizzazioniCards = document.querySelectorAll('.realizzazione-card');
+  const topK = {{ top_k }};
+  
+  // Funzione per mostrare/nascondere le realizzazioni
+  function filterRealizzazioni(tipoSelezionato) {
+    let visibleCount = 0;
+    
+    realizzazioniCards.forEach((card, index) => {
+      const tipi = card.getAttribute('data-tipi').split(',');
+      let shouldShow = false;
+      
+      if (tipoSelezionato === 'default') {
+        // Vista default: mostra solo i primi topK in ordine
+        shouldShow = index < topK;
+      } else {
+        // Filtra per tipo specifico
+        shouldShow = tipi.includes(tipoSelezionato);
+      }
+      
+      if (shouldShow) {
+        card.style.display = 'flex';
+        card.classList.remove('hidden');
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+        card.classList.add('hidden');
+      }
+    });
+  }
+  
+  // Event listener per i pulsanti tipo
+  tipoBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      // Rimuovi active da tutti i pulsanti
+      tipoBtns.forEach(b => b.classList.remove('active'));
+      
+      // Aggiungi active al pulsante cliccato
+      this.classList.add('active');
+      
+      // Filtra le realizzazioni
+      const tipo = this.getAttribute('data-tipo');
+      filterRealizzazioni(tipo);
+    });
+  });
+  
+  // Inizializza con la vista default
+  filterRealizzazioni('default');
+});
+</script>
