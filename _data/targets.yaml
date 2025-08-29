@@ -3,6 +3,11 @@
   text: Attrezzature per cucine professionali e arredi su misura.
   url: /progettazione-cucine-professionali
 
+- image: /assets/img/icons/icon-sgabello.svg
+  title: Arredamenti
+  text: Arredamenti su misura per bar e ristoranti
+  url: /arredamenti
+
 - image: assets/img/icons/icon-gdo.svg
   title: GDO
   text: Soluzioni per supermercati e punti vendita.
@@ -17,3 +22,8 @@
   title: Assistenza
   text: Servizio di manutenzione e pronto intervento.
   url: /assistenza
+
+- image: /assets/img/icons/icon-sushi.svg
+  title: Cucina Orientale
+  text: Attrezzature specifiche per cucina asiatica
+  url: /cucina-orientale

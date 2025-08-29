@@ -75,6 +75,9 @@
   }
   .hero-title {
     font-size: 2rem;
+    white-space: normal;
+    line-height: 1.2;
+    max-width: 90%;
   }
 }
 
