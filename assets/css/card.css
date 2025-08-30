@@ -47,7 +47,7 @@
       max-width: 90vw;
     /* flex-wrap: wrap; /* permetti wrapping su desktop * /
     justify-content: center; /* centra le card */
-    /* margin-right: 0; rimuovi il gap su desktop * /
+    /* margin-right: 0; rimuovi il gap su desktop */
   }
 }
 
