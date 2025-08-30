@@ -20,7 +20,7 @@
 }
 
 .card-set {
-  width: auto;
+  width: 100%;
   display: flex;
   gap: 2rem;
   flex-shrink: 0; /* impedisce la compressione */
