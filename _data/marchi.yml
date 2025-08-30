@@ -38,9 +38,14 @@
   url: /i-nostri-marchi#moretti-forni--tradizione-e-innovazione #https://www.morettiforni.it/
   new_tab: False
 
-- nome: SAGI
-  logo: sagi.svg
-  url: https://www.sagispa.it/
+- nome: Casta
+  logo: casta.webp
+  url: /i-nostri-marchi#cucine-casta
+  new_tab: False
+  
+#- nome: SAGI
+#  logo: sagi.svg
+#  url: https://www.sagispa.it/
 
 - nome: Orved
   logo: orved.webp

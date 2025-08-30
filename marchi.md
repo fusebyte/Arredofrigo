@@ -110,3 +110,17 @@ Accanto alla linea di cottura, Giorik propone anche forni combinati e a vapore d
 {% include products-cards.html 
    prodotti=prodotti_inoxbim
 %}
+
+
+## Cucine Casta
+
+Le cucine Casta si distinguono per la loro solidità, l’affidabilità nel tempo e la capacità di adattarsi a ogni esigenza professionale. Oltre alle soluzioni classiche per la ristorazione italiana ed europea, la gamma offre anche attrezzature specifiche per cucine etniche, pensate per chi desidera portare in tavola sapori autentici e metodi di cottura tradizionali.
+
+Tra le soluzioni disponibili troviamo moduli dedicati alla cucina asiatica, come wok professionali ad alta potenza, piastre teppanyaki ideali per la preparazione a vista e vaporiere per dim sum e altre specialità al vapore. L’integrazione di questi strumenti nelle cucine Casta consente di realizzare menu variegati, garantendo sempre la massima efficienza e sicurezza.
+
+Le cucine Casta possono essere configurate su misura, unendo tecnologia e praticità per rispondere a tutte le esigenze di un ristorante moderno, sia esso tradizionale o specializzato in cucina etnica.
+
+{% assign prodotti_inoxbim = site.data.prodotti | where: "marchio", "Casta" %}
+{% include products-cards.html 
+   prodotti=prodotti_inoxbim
+%}
