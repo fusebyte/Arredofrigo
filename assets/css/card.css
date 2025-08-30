@@ -5,6 +5,8 @@
   
   margin: 3rem auto;
   padding: 0 1rem;
+  display: flex;
+  justify-content: center;
 
   /* tutte le proprietà seguenti probabilmente vanno tolte? * /
   overflow-x: auto;
@@ -18,6 +20,7 @@
 }
 
 .card-set {
+  width: auto;
   display: flex;
   gap: 2rem;
   flex-shrink: 0; /* impedisce la compressione */
@@ -40,10 +43,11 @@
     /*scroll-snap-type: none; /* disabilita scroll-snap su desktop * /
   }*/
   
-  .card-set {
-    /* flex-wrap: wrap; /* permetti wrapping su desktop */
+    .card-set {
+      max-width: 90vw;
+    /* flex-wrap: wrap; /* permetti wrapping su desktop * /
     justify-content: center; /* centra le card */
-    /* margin-right: 0; rimuovi il gap su desktop */
+    /* margin-right: 0; rimuovi il gap su desktop * /
   }
 }
 
