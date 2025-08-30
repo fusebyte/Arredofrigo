@@ -10,9 +10,9 @@ permalink: /demo-forni-unox/
 Vuoi scoprire dal vivo le potenzialità dei forni Unox Mind.Maps™ nella tua cucina professionale? Prenota una dimostrazione gratuita e senza impegno: ti portiamo il forno da testare direttamente da te, completo di chef esperto per illustrarti programmazioni, cotture e tecnologie.
 
 ### Cosa offriamo durante la demo:
-- Presentazione dei forni **ChefTop**, **BakerTop** e **Mind.Maps™ Zero/Plus/One**, con tutte le principali funzioni di cottura (vapore, convezione, griglia, affumicatura, rigenerazione, brasatura ecc.)
-- Dimostrazione delle tecnologie avanzate come **livelli di umidità programmabili**, **Steam.Plus**, **Dry.Maxi**, **Adaptive.Cooking** e i sistemi automatici di lavaggio (ove disponibili)
-- Un chef professionista ti accompagnerà passo passo, consigliando le programmazioni più adatte ai tuoi piatti e al tuo flusso operativo
+- Presentazione dei forni **ChefTop**, **BakerTop** e **serie X**, con tutte le principali funzioni di cottura (vapore, convezione, griglia, affumicatura, rigenerazione, brasatura ecc.)
+- Dimostrazione delle tecnologie avanzate come **livelli di umidità programmabili**, **Steam.Plus**, **Dry.Maxi**, **Adaptive.Cooking** e i sistemi automatici di lavaggio
+- Uno chef professionista ti accompagnerà passo passo, consigliando le programmazioni più adatte ai tuoi piatti e al tuo flusso operativo
 - Installazione rapida: bastano una presa elettrica (pentapolare) e un collegamento all’acqua; in 10 minuti il forno è pronto per la prova
 
 ### Perché vale la pena:
@@ -35,14 +35,12 @@ Scegli tu la data e l’orario più comodi: noi ti portiamo tecnologia, supporto
 %}
 ---
 
-### Informazioni Tecniche (facilitano la dimostrazione)
+## Prove di cottura presso la nostra sede
 
-| Modelli | Tipi di cottura | Tecnologie chiave |
-|---------|------------------|-------------------|
-| **ChefTop Mind.Maps™ Plus / One** | Convezione, vapore, griglia, affumicatura, rigenerazione, basse temperature, cotture sottovuoto, multi-step programmabili | MIND.Maps™, Steam.Maxi, Dry.Maxi, Adaptive.Cooking, pannelli One o Plus, lavaggio automatico (Plus)|
-| **BakerTop Mind.Maps™ Plus** | Panificazione, pasticceria, impasti freschi o congelati | Programmi automatizzati, memorizzazione di processi, lavaggio automatico |
-| **Mind.Maps™ Zero** | Cottura semplice e robusta, qualità essenziale | Vapore e convezione, costruzione solida in acciaio inox, ottimo rapporto qualità/prezzo  |
+Organizziamo regolarmente dimostrazioni dei forni Unox anche presso la nostra sede.
+
+Seleziona insieme allo chef i piatti da preparare che più vorresti vedere, o partecipa a una demo e scopri nuove ricette e possibilità dei forni combinati Unox. 
 
 ---
 
-Per qualsiasi domanda su modelli, disponibilità o dettagli tecnici, siamo qui per aiutarti.
+Per qualsiasi domanda su modelli, disponibilità o dettagli tecnici, siamo qui per aiutarti, visita la pagina [Contattaci](/contatti).
