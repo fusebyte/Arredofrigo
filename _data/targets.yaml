@@ -9,13 +9,13 @@
   url: /arredamenti
 
 - image: assets/img/icons/icon-gdo.svg
-  title: GDO
+  title: Negozi
   text: Soluzioni per supermercati e punti vendita.
   url: /supermercati
 
 - image: assets/img/icons/icon-mepa.svg
   title: MEPA
-  text: Supporto tecnico e documentazione per appalti e gare.
+  text: Effettuiamo forniture per appalti e gare della pubblica amministrazione.
   url: /pubblica-amministrazione
 
 - image: /assets/img/icons/icon-repair.svg

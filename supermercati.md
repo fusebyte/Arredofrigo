@@ -3,16 +3,16 @@ layout: hero
 
 ---
 
-# Forniture per la Grande Distribuzione Organizzata (GDO)
+# Forniture per Supermercati e Negozi
 
-## Arredofrigo per la GDO
+## Arredofrigo per i punti vendita
 
-Arredofrigo è specializzata nella fornitura di attrezzature e impianti professionali per supermercati, minimarket e catene della GDO.
+Arredofrigo è specializzata nella fornitura di attrezzature e impianti professionali per supermercati, minimarket e catene.
 Da oltre trent’anni supportiamo le realtà della distribuzione moderna con soluzioni complete: progettazione, fornitura, installazione e assistenza tecnica certificata.
 
 ## Soluzioni per la Grande Distribuzione
 
-Siamo il partner ideale per le aziende della GDO che richiedono efficienza, affidabilità e continuità operativa.
+Siamo il partner ideale per le aziende che richiedono efficienza, affidabilità e continuità operativa.
 Le nostre forniture comprendono:
 
 - Banchi frigo e impianti di refrigerazione industriale
@@ -20,7 +20,7 @@ Le nostre forniture comprendono:
 - Forni e attrezzature per la produzione su larga scala
 - Servizi di manutenzione e assistenza rapida
 
-## Perché scegliere Arredofrigo per la GDO
+## Perché scegliere Arredofrigo per il proprio negozio
 
 - Esperienza consolidata in supermercati e catene di distribuzione
 - Progettazione su misura con sistemi CAD
@@ -30,16 +30,14 @@ Le nostre forniture comprendono:
 
 ## Case study e realizzazioni
 
-Abbiamo realizzato impianti e forniture per diversi punti vendita della grande distribuzione in Toscana e in altre regioni.
+Abbiamo realizzato impianti e forniture per diversi punti vendita della grande distribuzione.
 Visita la sezione [Realizzazioni](/realizzazioni) per scoprire alcuni esempi concreti.
 
 ## Contatti
 
-Vuoi ricevere una consulenza personalizzata per il tuo supermercato o punto vendita GDO?
-Il nostro team è a disposizione: compila il form nella pagina [Contatti](/contatti).
+Vuoi ricevere una consulenza personalizzata per il tuo supermercato o punto vendita?
+Il nostro team è a disposizione: visita la pagina [Contatti](/contatti).
 
-
-{% assign realizzazioni_correlate = site.data.realizzazioni | where_exp: "item", "item.disegno_cad" | sample : 6 %}
 
 {% include realizzazioni-correlate.html
     titolo_tab = "🎯 Nostre realizzazioni correlate"
